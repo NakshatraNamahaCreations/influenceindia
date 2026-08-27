@@ -1,0 +1,69 @@
+import { Reveal } from "@/components/ui/reveal";
+
+/**
+ * Multi-line uppercase display heading. Each line sits in its own overflow
+ * mask and rises into place with a stagger once the heading scrolls into view —
+ * the reference site's signature heading animation.
+ */
+export function HeadingLines({
+  lines,
+  emphasis,
+  size = "d2",
+  tone = "default",
+  className = "",
+  as: Tag = "h2",
+  stagger = 110,
+  animate = true,
+  mutedCount = 0,
+  accentCount = 0,
+}: {
+  lines: readonly string[];
+  emphasis?: string;
+  size?: "d1" | "d2" | "d3" | "d4";
+  tone?: "default" | "invert";
+  className?: string;
+  as?: React.ElementType;
+  /** ms between each line */
+  stagger?: number;
+  animate?: boolean;
+  /** render the first N lines in the muted tone, the rest at full contrast */
+  mutedCount?: number;
+  /** render the first N lines in the brand colour */
+  accentCount?: number;
+}) {
+  const accent = tone === "invert" ? "text-accent" : "text-brand";
+  const muted = tone === "invert" ? "text-paper/35" : "text-ink-30";
+
+  const renderLine = (line: string) => {
+    if (emphasis && line.includes(emphasis)) {
+      const [before, after] = line.split(emphasis);
+      return (
+        <>
+          {before}
+          <span className={accent}>{emphasis}</span>
+          {after}
+        </>
+      );
+    }
+    return line;
+  };
+
+  const heading = (
+    <Tag className={`display ${size} ${className}`}>
+      {lines.map((line, i) => (
+        <span key={line} className="line-mask">
+          <span
+            className={i < accentCount ? accent : i < mutedCount ? muted : undefined}
+            style={{ ["--line-delay" as string]: `${i * stagger}ms` }}
+          >
+            {renderLine(line)}
+          </span>
+        </span>
+      ))}
+    </Tag>
+  );
+
+  if (!animate) return heading;
+
+  return <Reveal mode="trigger">{heading}</Reveal>;
+}

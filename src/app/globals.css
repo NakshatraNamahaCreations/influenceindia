@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Influence India Services — design tokens
+   Layout / type system modelled on the reference site:
+   uppercase grotesque display type, Helvetica body,
+   mono UI labels, alternating black + paper sections.
+   ============================================================ */
+
+@theme {
+  --color-ink: #111111;
+  --color-ink-90: rgba(17, 17, 17, 0.88);
+  --color-ink-70: rgba(17, 17, 17, 0.72);
+  --color-ink-50: rgba(17, 17, 17, 0.5);
+  --color-ink-30: rgba(17, 17, 17, 0.3);
+  --color-paper: #ffffff;
+  --color-surface: #f4f4f4;
+  --color-surface-2: #ebebeb;
+  --color-brand: #0016cb;
+  --color-brand-soft: #edefff;
+  --color-accent: #ff5500;
+
+  --color-line: rgba(17, 17, 17, 0.2);
+  --color-line-soft: rgba(17, 17, 17, 0.1);
+  --color-line-invert: rgba(255, 255, 255, 0.2);
+  --color-line-invert-soft: rgba(255, 255, 255, 0.12);
+
+  --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* display scale — desktop / tablet / mobile of the reference */
+  --text-d1: clamp(4.2rem, 7.4vw, 9.6rem);
+  --text-d2: clamp(3.2rem, 5.4vw, 7.2rem);
+  --text-d3: clamp(2.8rem, 4.2vw, 5.6rem);
+  --text-d4: clamp(2.2rem, 2.8vw, 4rem);
+  --text-d5: clamp(2rem, 2.1vw, 3.2rem);
+  --text-d6: clamp(1.7rem, 1.5vw, 2.4rem);
+
+  --radius-pill: 4rem;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ---- Lenis (smooth scroll) ---- */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  /* native smooth scrolling only when Lenis is off (reduced motion) */
+  html:not(.lenis) {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+    /* clip, not hidden — `hidden` creates a scroll container and would break
+       the sticky/pinned sections below */
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-brand);
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* ---- display headings: uppercase, tight, heavy ---- */
+  .display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.015em;
+    line-height: 1.03;
+    text-wrap: balance;
+  }
+
+  .d1 { font-size: var(--text-d1); }
+  .d2 { font-size: var(--text-d2); }
+  .d3 { font-size: var(--text-d3); }
+  .d4 { font-size: var(--text-d4); }
+  .d5 { font-size: var(--text-d5); line-height: 1.08; }
+  .d6 { font-size: var(--text-d6); line-height: 1.12; }
+
+  /* ---- mono UI label ---- */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  /* ---- lede paragraph ---- */
+  .lede {
+    font-size: clamp(1.05rem, 1.15vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--color-ink-70);
+    text-wrap: pretty;
+  }
+
+  /* ---- section shell: full-bleed with 16-col inner grid ---- */
+  .shell {
+    width: 100%;
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
+  }
+
+  .shell-inner {
+    max-width: 108rem;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .section-y {
+    padding-block: clamp(4.5rem, 8vw, 9rem);
+  }
+
+  /* ---- hairline rules used throughout the reference ---- */
+  .rule {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .rule-invert {
+    border-top: 1px solid var(--color-line-invert);
+  }
+}
+
+@layer utilities {
+  .invert-section {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  .invert-section .lede {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  /* marquee for partner logos + ticker */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 40s) linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-reverse {
+    animation-direction: reverse;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6rem, #000 calc(100% - 6rem), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6rem, #000 calc(100% - 6rem), transparent);
+  }
+
+  /* reveal-on-scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* trigger-only: fires child animations without moving itself */
+  .reveal-trigger {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* line-by-line masked heading reveal, staggered — the reference's
+     signature scroll animation */
+  .line-mask {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+  }
+
+  .line-mask > span {
+    display: block;
+    transform: translateY(115%);
+    transition: transform 0.95s var(--ease-out-expo);
+    transition-delay: var(--line-delay, 0ms);
+  }
+
+  .is-visible .line-mask > span {
+    transform: none;
+  }
+
+  /* pinned hero: the hero stays fixed while the page scrolls over it */
+  .scroll-stack {
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-paper);
+  }
+
+  .hero-pin {
+    position: sticky;
+    top: 0;
+    z-index: 0;
+  }
+
+  /* sticky column heading inside two-column sections */
+  .sticky-head {
+    position: static;
+  }
+
+  @media (min-width: 1024px) {
+    .sticky-head {
+      position: sticky;
+      top: 8.5rem;
+      align-self: start;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .line-mask > span { transform: none; transition: none; }
+    .marquee-track { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+}

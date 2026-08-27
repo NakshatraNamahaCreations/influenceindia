@@ -1,0 +1,239 @@
+{
+  "license": "Pexels License — free for commercial use, no attribution required",
+  "assets": [
+    {
+      "slot": "promise-team",
+      "pexelsId": "12903168",
+      "query": "office team meeting",
+      "page": "https://www.pexels.com/photo/12903168/"
+    },
+    {
+      "slot": "about-onboarding",
+      "pexelsId": "9870223",
+      "query": "job interview handshake",
+      "page": "https://www.pexels.com/photo/9870223/"
+    },
+    {
+      "slot": "hero-workforce",
+      "pexelsId": "4484152",
+      "query": "warehouse workers",
+      "page": "https://www.pexels.com/photo/4484152/"
+    },
+    {
+      "slot": "cap-1",
+      "pexelsId": "31112238",
+      "query": "factory worker",
+      "page": "https://www.pexels.com/photo/31112238/"
+    },
+    {
+      "slot": "cap-3",
+      "pexelsId": "8204317",
+      "query": "call center",
+      "page": "https://www.pexels.com/photo/8204317/"
+    },
+    {
+      "slot": "pillars-training",
+      "pexelsId": "416754",
+      "query": "training class",
+      "page": "https://www.pexels.com/photo/416754/"
+    },
+    {
+      "slot": "svc-right-staffing",
+      "pexelsId": "5439379",
+      "query": "job interview",
+      "page": "https://www.pexels.com/photo/5439379/"
+    },
+    {
+      "slot": "svc-elevate-growth",
+      "pexelsId": "33175650",
+      "query": "business handshake",
+      "page": "https://www.pexels.com/photo/33175650/"
+    },
+    {
+      "slot": "svc-pan-india",
+      "pexelsId": "36171603",
+      "query": "india city",
+      "page": "https://www.pexels.com/photo/36171603/"
+    },
+    {
+      "slot": "svc-skill-adoption",
+      "pexelsId": "12965141",
+      "query": "vocational training",
+      "page": "https://www.pexels.com/photo/12965141/"
+    },
+    {
+      "slot": "svc-staffing-services",
+      "pexelsId": "7693692",
+      "query": "office team working",
+      "page": "https://www.pexels.com/photo/7693692/"
+    },
+    {
+      "slot": "svc-managed-services",
+      "pexelsId": "8117476",
+      "query": "office team working",
+      "page": "https://www.pexels.com/photo/8117476/"
+    },
+    {
+      "slot": "platform-dos",
+      "pexelsId": "7964513",
+      "query": "office team working",
+      "page": "https://www.pexels.com/photo/7964513/"
+    },
+    {
+      "slot": "cap-2",
+      "pexelsId": "6326260",
+      "query": "office team working",
+      "page": "https://www.pexels.com/photo/6326260/"
+    },
+    {
+      "slot": "systems-team",
+      "pexelsId": "7653461",
+      "query": "office team working",
+      "page": "https://www.pexels.com/photo/7653461/"
+    },
+    {
+      "slot": "careers-life",
+      "pexelsId": "3863830",
+      "query": "office team working",
+      "page": "https://www.pexels.com/photo/3863830/"
+    },
+    {
+      "slot": "card-dos",
+      "pexelsId": "5257005",
+      "query": "teamwork",
+      "page": "https://www.pexels.com/photo/5257005/"
+    },
+    {
+      "slot": "card-app",
+      "pexelsId": "5256819",
+      "query": "teamwork",
+      "page": "https://www.pexels.com/photo/5256819/"
+    },
+    {
+      "slot": "strip-1",
+      "pexelsId": "5426376",
+      "query": "teamwork",
+      "page": "https://www.pexels.com/photo/5426376/"
+    },
+    {
+      "slot": "strip-2",
+      "pexelsId": "5833330",
+      "query": "teamwork",
+      "page": "https://www.pexels.com/photo/5833330/"
+    },
+    {
+      "slot": "strip-3",
+      "pexelsId": "7644016",
+      "query": "teamwork",
+      "page": "https://www.pexels.com/photo/7644016/"
+    },
+    {
+      "slot": "hero video (what-we-do)",
+      "pexelsId": "4281239",
+      "query": "warehouse workers",
+      "page": "https://www.pexels.com/video/working-men-warehouse-box-4281239/"
+    },
+    {
+      "slot": "hero video (home)",
+      "pexelsId": "4629264",
+      "query": "office team",
+      "page": "https://www.pexels.com/video/a-group-of-people-working-together-inside-an-office-4629264/"
+    },
+    {
+      "slot": "portrait-1",
+      "pexelsId": "10577611",
+      "query": "portrait",
+      "page": "https://www.pexels.com/photo/10577611/"
+    },
+    {
+      "slot": "portrait-2",
+      "pexelsId": "29204802",
+      "query": "portrait",
+      "page": "https://www.pexels.com/photo/29204802/"
+    },
+    {
+      "slot": "portrait-3",
+      "pexelsId": "30386124",
+      "query": "portrait",
+      "page": "https://www.pexels.com/photo/30386124/"
+    },
+    {
+      "slot": "home-pillars",
+      "pexelsId": "30945609",
+      "query": "classroom",
+      "page": "https://www.pexels.com/photo/30945609/"
+    },
+    {
+      "slot": "gtp-community",
+      "pexelsId": "33415745",
+      "query": "classroom",
+      "page": "https://www.pexels.com/photo/33415745/"
+    },
+    {
+      "slot": "gtp-analytics",
+      "pexelsId": "5831343",
+      "query": "analytics",
+      "page": "https://www.pexels.com/photo/5831343/"
+    },
+    {
+      "slot": "home-promise",
+      "pexelsId": "6248959",
+      "query": "analytics",
+      "page": "https://www.pexels.com/photo/6248959/"
+    },
+    {
+      "slot": "bengaluru-city",
+      "pexelsId": "14845309",
+      "query": "bangalore",
+      "page": "https://www.pexels.com/photo/14845309/"
+    },
+    {
+      "slot": "res-1",
+      "pexelsId": "7658310",
+      "query": "workspace",
+      "page": "https://www.pexels.com/photo/7658310/"
+    },
+    {
+      "slot": "res-2",
+      "pexelsId": "8369211",
+      "query": "workspace",
+      "page": "https://www.pexels.com/photo/8369211/"
+    },
+    {
+      "slot": "res-3",
+      "pexelsId": "7457914",
+      "query": "workspace",
+      "page": "https://www.pexels.com/photo/7457914/"
+    },
+    {
+      "slot": "systems-apply",
+      "pexelsId": "38766370",
+      "query": "mentor",
+      "page": "https://www.pexels.com/photo/38766370/"
+    },
+    {
+      "slot": "careers-team",
+      "pexelsId": "38748858",
+      "query": "mentor",
+      "page": "https://www.pexels.com/photo/38748858/"
+    },
+    {
+      "slot": "video: training band",
+      "pexelsId": "5198159",
+      "query": "classroom teaching",
+      "page": "https://www.pexels.com/video/a-teacher-teaching-his-students-inside-a-classroom-5198159/"
+    },
+    {
+      "slot": "video: study band",
+      "pexelsId": "8342354",
+      "query": "students studying",
+      "page": "https://www.pexels.com/video/students-studying-in-the-classroom-8342354/"
+    },
+    {
+      "slot": "video: city band",
+      "pexelsId": "4039439",
+      "query": "delhi aerial",
+      "page": "https://www.pexels.com/video/drone-footage-of-delhi-4039439/"
+    }
+  ]
+}
