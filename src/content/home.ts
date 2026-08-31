@@ -122,21 +122,18 @@ export const testimonialsSection = {
     {
       quote:
         "I started my journey as a marketing executive and today I am proud to be working as a marketing senior manager, leading a wonderful team. Over the years I have witnessed how tremendously Influence India can transform. Along with the company's progress I too have grown, both personally and professionally.",
-      photo: "/images/portrait-1.jpg",
       name: "Mohan Arya",
       role: "Senior Manager, Marketing",
     },
     {
       quote:
         "The onsite management team and the central operation system removed the guesswork from our rosters. We stopped chasing vendors and started planning our floor with confidence.",
-      photo: "/images/portrait-2.jpg",
       name: "Operations Lead",
       role: "Corporate client, Bengaluru",
     },
     {
       quote:
         "I joined as a fresher. The training, the assessment and the certification made me employable in weeks — and the placement was equivalent to my education.",
-      photo: "/images/portrait-3.jpg",
       name: "Certified Aspirant",
       role: "Service provider, Karnataka",
     },

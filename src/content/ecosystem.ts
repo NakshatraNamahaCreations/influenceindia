@@ -11,60 +11,25 @@ export const ecosystem = {
   ],
   accentLine: "creation of your career, today!",
   body:
-    "Every service radiates from one accountable team — sourced, skilled, certified, deployed and monitored under a single system.",
+    "Your workforce sits at the centre — sourced, skilled, certified, deployed and monitored by one accountable team. Every service radiates from it.",
+
+  centre: {
+    src: "/images/ecosystem-centre.jpg",
+    alt: "An Influence India team together in the workplace",
+  },
 
   /**
-   * Six capabilities placed around the mark. `side` decides which way the
-   * label sits; the coordinates are on the diagram's 1200×760 canvas.
+   * Six capabilities placed around the hub. `angle` is where the leader line
+   * meets the centre ring (degrees, 0 = right, clockwise); `labelY` is where
+   * the label sits. Both are resolved against the diagram's 1200×780 canvas,
+   * so a leader line always terminates exactly on the ring.
    */
   capabilities: [
-    {
-      id: "right-staffing",
-      lines: ["Right", "Staffing"],
-      side: "left" as const,
-      y: 150,
-      elbowX: 452,
-      endY: 292,
-    },
-    {
-      id: "pan-india",
-      lines: ["PAN-India", "Sourcing"],
-      side: "left" as const,
-      y: 340,
-      elbowX: 416,
-      endY: 402,
-    },
-    {
-      id: "ostp",
-      lines: ["Onsite Skill", "Training"],
-      side: "left" as const,
-      y: 578,
-      elbowX: 462,
-      endY: 486,
-    },
-    {
-      id: "managed-services",
-      lines: ["Managed", "Services"],
-      side: "right" as const,
-      y: 168,
-      elbowX: 762,
-      endY: 300,
-    },
-    {
-      id: "dos",
-      lines: ["Dedicated", "Operation System"],
-      side: "right" as const,
-      y: 356,
-      elbowX: 792,
-      endY: 414,
-    },
-    {
-      id: "support",
-      lines: ["24/7 Client", "Support"],
-      side: "right" as const,
-      y: 590,
-      elbowX: 748,
-      endY: 502,
-    },
+    { id: "right-staffing", lines: ["Right", "Staffing"], side: "left" as const, labelY: 150, angle: 215 },
+    { id: "pan-india", lines: ["PAN-India", "Sourcing"], side: "left" as const, labelY: 400, angle: 180 },
+    { id: "ostp", lines: ["Onsite Skill", "Training"], side: "left" as const, labelY: 620, angle: 145 },
+    { id: "managed-services", lines: ["Managed", "Services"], side: "right" as const, labelY: 150, angle: 325 },
+    { id: "dos", lines: ["Dedicated", "Operation System"], side: "right" as const, labelY: 400, angle: 0 },
+    { id: "support", lines: ["24/7 Client", "Support"], side: "right" as const, labelY: 620, angle: 35 },
   ],
 };

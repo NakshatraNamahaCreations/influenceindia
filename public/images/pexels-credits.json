@@ -39,9 +39,9 @@
     },
     {
       "slot": "svc-right-staffing",
-      "pexelsId": "5439379",
-      "query": "job interview",
-      "page": "https://www.pexels.com/photo/5439379/"
+      "pexelsId": "7580643",
+      "query": "indian business",
+      "page": "https://www.pexels.com/photo/7580643/"
     },
     {
       "slot": "svc-elevate-growth",
@@ -140,24 +140,6 @@
       "page": "https://www.pexels.com/video/a-group-of-people-working-together-inside-an-office-4629264/"
     },
     {
-      "slot": "portrait-1",
-      "pexelsId": "10577611",
-      "query": "portrait",
-      "page": "https://www.pexels.com/photo/10577611/"
-    },
-    {
-      "slot": "portrait-2",
-      "pexelsId": "29204802",
-      "query": "portrait",
-      "page": "https://www.pexels.com/photo/29204802/"
-    },
-    {
-      "slot": "portrait-3",
-      "pexelsId": "30386124",
-      "query": "portrait",
-      "page": "https://www.pexels.com/photo/30386124/"
-    },
-    {
       "slot": "home-pillars",
       "pexelsId": "30945609",
       "query": "classroom",
@@ -234,6 +216,12 @@
       "pexelsId": "4039439",
       "query": "delhi aerial",
       "page": "https://www.pexels.com/video/drone-footage-of-delhi-4039439/"
+    },
+    {
+      "slot": "ecosystem-centre",
+      "pexelsId": "7580648",
+      "query": "indian office",
+      "page": "https://www.pexels.com/photo/7580648/"
     }
   ]
 }

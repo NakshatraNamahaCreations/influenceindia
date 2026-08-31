@@ -26,13 +26,31 @@ export function Testimonials({
         >
           <figcaption className="flex flex-col gap-4 md:col-span-3">
             <div className="w-[7.5rem]">
-              <Media
-                src={item.photo}
-                alt={item.photo ? item.name : ""}
-                label="Portrait"
-                ratio="4/5"
-                tone={tone === "invert" ? "dark" : "light"}
-              />
+              {item.photo ? (
+                <Media
+                  src={item.photo}
+                  alt={item.name}
+                  ratio="4/5"
+                  tone={tone === "invert" ? "dark" : "light"}
+                />
+              ) : (
+                /* No stock faces on named testimonials — a monogram until a
+                   real photograph of the person is supplied. */
+                <div
+                  className={`flex aspect-4/5 items-center justify-center border ${border} ${
+                    tone === "invert" ? "bg-paper/5" : "bg-paper"
+                  }`}
+                  aria-hidden="true"
+                >
+                  <span className="display d4 text-brand">
+                    {item.name
+                      .split(" ")
+                      .map((word) => word[0])
+                      .slice(0, 2)
+                      .join("")}
+                  </span>
+                </div>
+              )}
             </div>
             <div className="flex flex-col gap-1.5">
               <span className="label">{item.name}</span>
