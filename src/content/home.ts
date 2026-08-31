@@ -1,7 +1,7 @@
 export const hero = {
   eyebrow: "Influence India Services",
   headingLines: ["One system", "Every step of the career"],
-  mutedCount: 1,
+  mutedCount: 0,
   video: "/videos/home-team.mp4",
   poster: "/images/home-poster.jpg",
   body:

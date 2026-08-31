@@ -26,7 +26,7 @@ export function Hero({
   }[];
 }) {
   return (
-    <section className="hero-pin invert-section relative isolate overflow-hidden">
+    <section className="invert-section relative isolate overflow-hidden">
       {/* backdrop: background video when supplied, else grid + glow */}
       <div className="absolute inset-0 -z-10" aria-hidden="true">
         {video ? (
@@ -42,7 +42,7 @@ export function Hero({
             >
               <source src={video} type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/55" />
           </>
         ) : (
           <>
@@ -74,6 +74,7 @@ export function Hero({
             mutedCount={mutedCount}
             size="d1"
             tone="invert"
+            animate={false}
             className="max-w-[18ch]"
           />
 

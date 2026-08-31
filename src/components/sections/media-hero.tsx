@@ -28,7 +28,7 @@ export function MediaHero({
   ticker: readonly string[];
 }) {
   return (
-    <section className="hero-pin invert-section relative isolate overflow-hidden">
+    <section className="invert-section relative isolate overflow-hidden">
       {/* background media + scrim */}
       <div className="absolute inset-0 -z-10" aria-hidden="true">
         {video ? (
@@ -58,7 +58,7 @@ export function MediaHero({
             <div className="absolute -right-[12%] top-[-25%] h-[40rem] w-[40rem] rounded-full bg-brand opacity-35 blur-[150px]" />
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/75 to-ink/50" />
       </div>
 
       <div className="shell">
@@ -76,6 +76,7 @@ export function MediaHero({
             mutedCount={mutedCount}
             size="d1"
             tone="invert"
+            animate={false}
             className="max-w-[16ch]"
           />
           {imageLabel && !src ? (

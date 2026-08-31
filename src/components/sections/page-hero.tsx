@@ -21,7 +21,7 @@ export function PageHero({
   }[];
 }) {
   return (
-    <section className="hero-pin border-b border-line bg-paper">
+    <section className="border-b border-line bg-paper">
       <div className="shell">
         <div className="shell-inner pt-16 pb-16 md:pt-24 md:pb-20">
           <Reveal>

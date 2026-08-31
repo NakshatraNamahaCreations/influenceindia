@@ -48,22 +48,38 @@ export function HeadingLines({
     return line;
   };
 
-  const heading = (
-    <Tag className={`display ${size} ${className}`}>
-      {lines.map((line, i) => (
-        <span key={line} className="line-mask">
-          <span
-            className={i < accentCount ? accent : i < mutedCount ? muted : undefined}
-            style={{ ["--line-delay" as string]: `${i * stagger}ms` }}
-          >
+  const shade = (i: number) =>
+    i < accentCount ? accent : i < mutedCount ? muted : undefined;
+
+  // Static: plain lines, no mask. The mask relies on `.is-visible` being applied
+  // by Reveal, so rendering it without the wrapper would leave the text
+  // permanently translated out of view.
+  if (!animate) {
+    return (
+      <Tag className={`display ${size} ${className}`}>
+        {lines.map((line, i) => (
+          <span key={line} className={`block ${shade(i) ?? ""}`.trim()}>
             {renderLine(line)}
           </span>
-        </span>
-      ))}
-    </Tag>
+        ))}
+      </Tag>
+    );
+  }
+
+  return (
+    <Reveal mode="trigger">
+      <Tag className={`display ${size} ${className}`}>
+        {lines.map((line, i) => (
+          <span key={line} className="line-mask">
+            <span
+              className={shade(i)}
+              style={{ ["--line-delay" as string]: `${i * stagger}ms` }}
+            >
+              {renderLine(line)}
+            </span>
+          </span>
+        ))}
+      </Tag>
+    </Reveal>
   );
-
-  if (!animate) return heading;
-
-  return <Reveal mode="trigger">{heading}</Reveal>;
 }

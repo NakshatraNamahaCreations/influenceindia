@@ -238,17 +238,10 @@
     transform: none;
   }
 
-  /* pinned hero: the hero stays fixed while the page scrolls over it */
+  /* page body below the hero — heroes scroll normally, nothing pins */
   .scroll-stack {
     position: relative;
-    z-index: 1;
     background-color: var(--color-paper);
-  }
-
-  .hero-pin {
-    position: sticky;
-    top: 0;
-    z-index: 0;
   }
 
   /* sticky column heading inside two-column sections */
