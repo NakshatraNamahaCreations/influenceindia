@@ -117,7 +117,10 @@ export const whyUs = {
 
 export const testimonialsSection = {
   eyebrow: "Our people",
-  heading: "Trusted by entities and aspirants across India",
+  headingLines: ["Trusted by entities", "and aspirants", "across India"],
+  mutedCount: 2,
+  body:
+    "From the aspirants we train and certify to the entities that deploy them — the same accountable team stands behind both.",
   items: [
     {
       quote:

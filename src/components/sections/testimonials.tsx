@@ -2,65 +2,82 @@ import { Media } from "@/components/ui/media";
 import { Reveal } from "@/components/ui/reveal";
 
 /**
- * Stacked testimonial rows: portrait plus name/role in a narrow left column,
- * the quote running wide on the right — the reference's layout.
+ * Testimonial cards: a lime quote glyph, the quote, then a monogram (or
+ * photograph, when one is supplied) with the person's name and role.
+ *
+ * Named testimonials deliberately fall back to a monogram rather than stock
+ * faces — presenting a photograph of a real, identifiable person as an
+ * employee giving a quote they never gave is a misrepresentation.
  */
 export function Testimonials({
   items,
-  tone = "default",
+  tone = "invert",
 }: {
   items: readonly { quote: string; name: string; role: string; photo?: string }[];
   tone?: "default" | "invert";
 }) {
-  const border = tone === "invert" ? "border-line-invert" : "border-line";
-  const muted = tone === "invert" ? "text-paper/50" : "text-ink-50";
-  const quote = tone === "invert" ? "text-paper/85" : "text-ink-90";
+  const invert = tone === "invert";
+  const cardBg = invert ? "bg-paper/[0.04]" : "bg-paper";
+  const cardBorder = invert ? "border-line-invert" : "border-line";
+  const quoteText = invert ? "text-paper/85" : "text-ink-90";
+  const muted = invert ? "text-paper/50" : "text-ink-50";
+  const glyph = invert ? "text-accent" : "text-brand";
 
   return (
-    <div className={`border-t ${border}`}>
+    <div className="grid gap-6 lg:grid-cols-3">
       {items.map((item, i) => (
-        <Reveal
-          key={item.name}
-          delay={i * 70}
-          className={`grid gap-8 border-b ${border} py-12 md:grid-cols-12 md:gap-16 md:py-16`}
-        >
-          <figcaption className="flex flex-col gap-4 md:col-span-3">
-            <div className="w-[7.5rem]">
+        <Reveal key={item.name} delay={i * 110}>
+          <figure
+            className={`group flex h-full flex-col border ${cardBorder} ${cardBg} p-8 transition-colors duration-500 hover:border-brand md:p-9`}
+          >
+            <span
+              className={`display text-[3.5rem] leading-[0.7] ${glyph}`}
+              aria-hidden="true"
+            >
+              &ldquo;
+            </span>
+
+            <blockquote
+              className={`mt-6 flex-1 text-[1rem] leading-relaxed ${quoteText}`}
+            >
+              {item.quote}
+            </blockquote>
+
+            <figcaption
+              className={`mt-8 flex items-center gap-4 border-t ${cardBorder} pt-6`}
+            >
               {item.photo ? (
-                <Media
-                  src={item.photo}
-                  alt={item.name}
-                  ratio="4/5"
-                  tone={tone === "invert" ? "dark" : "light"}
-                />
+                <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                  <Media
+                    src={item.photo}
+                    alt={item.name}
+                    ratio="1/1"
+                    className="h-full w-full"
+                  />
+                </span>
               ) : (
-                /* No stock faces on named testimonials — a monogram until a
-                   real photograph of the person is supplied. */
-                <div
-                  className={`flex aspect-4/5 items-center justify-center border ${border} ${
-                    tone === "invert" ? "bg-paper/5" : "bg-paper"
-                  }`}
+                <span
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${
+                    invert ? "bg-accent text-ink" : "bg-brand text-paper"
+                  } text-[0.85rem] font-semibold`}
                   aria-hidden="true"
                 >
-                  <span className="display d4 text-brand">
-                    {item.name
-                      .split(" ")
-                      .map((word) => word[0])
-                      .slice(0, 2)
-                      .join("")}
-                  </span>
-                </div>
+                  {item.name
+                    .split(" ")
+                    .map((word) => word[0])
+                    .slice(0, 2)
+                    .join("")}
+                </span>
               )}
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <span className="label">{item.name}</span>
-              <span className={`label text-[0.65rem] leading-relaxed ${muted}`}>{item.role}</span>
-            </div>
-          </figcaption>
 
-          <blockquote className={`text-[1.05rem] leading-relaxed md:col-span-8 md:col-start-5 ${quote}`}>
-            {item.quote}
-          </blockquote>
+              <span className="flex flex-col gap-1">
+                <span className="label text-[0.68rem]">{item.name}</span>
+                <span className={`text-[0.8rem] leading-snug ${muted}`}>
+                  {item.role}
+                </span>
+              </span>
+            </figcaption>
+          </figure>
         </Reveal>
       ))}
     </div>

@@ -86,21 +86,24 @@ export default function CareersPage() {
         </section>
 
         {/* ---------- word from our team ---------- */}
-        <section className="border-t border-line bg-surface">
+        <section className="invert-section">
           <div className="shell">
             <div className="shell-inner section-y">
-              <div className="grid gap-10 lg:grid-cols-12">
-                <div className="sticky-head lg:col-span-7">
+              <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+                <div className="lg:col-span-7">
                   <Reveal>
-                    <Eyebrow className="mb-7">A word from our team</Eyebrow>
+                    <Eyebrow tone="invert" className="mb-6">
+                      A word from our team
+                    </Eyebrow>
                   </Reveal>
                   <HeadingLines
-                    lines={["Moments from our stories of success"]}
-                    size="d2"
-                    className="max-w-[16ch]"
+                    lines={["Moments from our", "stories of success"]}
+                    mutedCount={1}
+                    size="d3"
+                    tone="invert"
                   />
                 </div>
-                <Reveal delay={140} className="lg:col-span-5">
+                <Reveal delay={140} className="lg:col-span-5 lg:pb-2">
                   <Media
                     src="/images/careers-team.jpg"
                     alt="Our team"

@@ -214,22 +214,26 @@ export default function HomePage() {
         </section>
 
         {/* ---------- testimonials ---------- */}
-        <section className="border-t border-line bg-surface">
+        <section className="invert-section">
           <div className="shell">
             <div className="shell-inner section-y">
-              <div className="grid gap-10 lg:grid-cols-12">
-                <div className="sticky-head lg:col-span-7">
+              <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+                <div className="lg:col-span-7">
                   <Reveal>
-                    <Eyebrow className="mb-7">
+                    <Eyebrow tone="invert" className="mb-6">
                       {testimonialsSection.eyebrow}
                     </Eyebrow>
                   </Reveal>
                   <HeadingLines
-                    lines={[testimonialsSection.heading]}
-                    size="d2"
-                    className="max-w-[16ch]"
+                    lines={testimonialsSection.headingLines}
+                    mutedCount={testimonialsSection.mutedCount}
+                    size="d3"
+                    tone="invert"
                   />
                 </div>
+                <Reveal delay={140} className="lg:col-span-5 lg:pb-2">
+                  <p className="lede">{testimonialsSection.body}</p>
+                </Reveal>
               </div>
               <div className="mt-14">
                 <Testimonials items={testimonialsSection.items} />
