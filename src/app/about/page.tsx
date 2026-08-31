@@ -29,7 +29,7 @@ export default function AboutPage() {
     <>
       <PageHero {...aboutHero} />
 
-      {/* everything after the hero scrolls over it — the pinned-hero stack */}
+      {/* page body below the hero */}
       <div className="scroll-stack">
         {/* ---------- mission ---------- */}
         <section className="shell">

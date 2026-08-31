@@ -39,7 +39,7 @@ export default function ContactPage() {
         body="Embark on a journey towards a sustainable working sector. Tell us what you need and our representative will be in touch."
       />
 
-      {/* everything after the hero scrolls over it — the pinned-hero stack */}
+      {/* page body below the hero */}
       <div className="scroll-stack">
         {/* ---------- details ---------- */}
         <section className="shell">

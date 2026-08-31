@@ -1,5 +1,6 @@
 import { VideoBand } from "@/components/sections/video-band";
 import { CtaBand } from "@/components/sections/cta-band";
+import { EcosystemDiagram } from "@/components/sections/ecosystem-diagram";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FeatureColumns } from "@/components/sections/feature-columns";
 import { Hero } from "@/components/sections/hero";
@@ -31,7 +32,7 @@ export default function HomePage() {
     <>
       <Hero {...hero} />
 
-      {/* everything after the hero scrolls over it — the pinned-hero stack */}
+      {/* page body below the hero */}
       <div className="scroll-stack">
         {/* ---------- promise + stats (pinned column module) ---------- */}
         <section className="shell">
@@ -92,6 +93,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ---------- ecosystem diagram ---------- */}
+        <EcosystemDiagram />
 
         {/* ---------- four pillars + visual ---------- */}
         <section className="shell">

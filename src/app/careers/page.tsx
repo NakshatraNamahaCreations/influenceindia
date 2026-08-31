@@ -30,7 +30,7 @@ export default function CareersPage() {
     <>
       <PageHero {...careersHero} />
 
-      {/* everything after the hero scrolls over it — the pinned-hero stack */}
+      {/* page body below the hero */}
       <div className="scroll-stack">
         {/* ---------- culture ---------- */}
         <section className="shell">

@@ -27,7 +27,7 @@ export default function GtpPage() {
     <>
       <PageHero {...gtpHero} />
 
-      {/* everything after the hero scrolls over it — the pinned-hero stack */}
+      {/* page body below the hero */}
       <div className="scroll-stack">
         {/* ---------- intro ---------- */}
         <section className="shell">

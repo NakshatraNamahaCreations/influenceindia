@@ -24,7 +24,7 @@ export default function SystemsPage() {
     <>
       <PageHero {...systemsHero} />
 
-      {/* everything after the hero scrolls over it — the pinned-hero stack */}
+      {/* page body below the hero */}
       <div className="scroll-stack">
         {/* ---------- join and grow ---------- */}
         <section className="shell">
