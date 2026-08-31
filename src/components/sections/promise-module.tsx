@@ -1,16 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Counter } from "@/components/ui/counter";
 import { HeadingLines } from "@/components/ui/heading-lines";
-import { Media } from "@/components/ui/media";
 import { Reveal } from "@/components/ui/reveal";
 
 /**
- * The reference site's signature scroll module: the left column (small image
- * card + oversized two-tone heading) pins to the top while the right column —
- * copy, CTA, then the stats stacked one per row — scrolls past it.
- *
- * The negative sticky offset lets the image card scroll out of frame before the
- * heading locks in place, exactly as it does on the reference.
+ * The reference site's signature scroll module: the left column (the oversized
+ * two-tone heading) pins to the top while the right column — copy, CTA, then
+ * the stats stacked one per row — scrolls past it.
  */
 export function PromiseModule({
   headingLines,
@@ -30,13 +26,7 @@ export function PromiseModule({
   return (
     <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
       {/* ---- pinned column ---- */}
-      <div className="lg:sticky lg:top-[-5.5rem] lg:col-span-6 lg:self-start">
-        <Reveal>
-          <div className="mb-10 w-[14rem] max-w-full">
-            <Media src="/images/home-promise.jpg" alt="Our team at work" ratio="3/2" />
-          </div>
-        </Reveal>
-
+      <div className="lg:sticky lg:top-36 lg:col-span-6 lg:self-start">
         <HeadingLines lines={headingLines} mutedCount={mutedCount} size="d2" />
       </div>
 
