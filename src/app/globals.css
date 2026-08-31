@@ -39,6 +39,7 @@
   --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: var(--font-dm-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-nav: var(--font-poppins), "Helvetica Neue", Arial, sans-serif;
 
   /* display scale — desktop / tablet / mobile of the reference */
   --text-d1: clamp(4.2rem, 7.4vw, 9.6rem);
@@ -128,6 +129,18 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     line-height: 1.4;
+  }
+
+  /* ---- header navigation: Poppins, sized for legibility ----
+     The mono `.label` face was too small and too widely tracked to read
+     comfortably at nav sizes. */
+  .nav-link {
+    font-family: var(--font-nav);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1;
   }
 
   /* ---- lede paragraph ---- */

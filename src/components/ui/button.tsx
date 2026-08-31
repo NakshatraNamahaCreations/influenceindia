@@ -4,7 +4,13 @@ import type { ComponentProps } from "react";
 type Variant = "primary" | "ghost" | "invert" | "invert-ghost";
 
 const base =
-  "group inline-flex items-center gap-3 rounded-[var(--radius-pill)] px-6 py-3.5 font-mono text-[0.72rem] uppercase tracking-[0.12em] leading-none transition-colors duration-300 whitespace-nowrap";
+  "group inline-flex items-center gap-3 rounded-[var(--radius-pill)] px-6 py-3.5 uppercase leading-none transition-colors duration-300 whitespace-nowrap";
+
+/** Type face for the label: the mono UI face by default, Poppins in the header. */
+const faces = {
+  mono: "font-mono text-[0.72rem] tracking-[0.12em]",
+  nav: "nav-link",
+} as const;
 
 const variants: Record<Variant, string> = {
   primary: "bg-ink text-paper hover:bg-brand",
@@ -36,6 +42,7 @@ export function ArrowIcon({ className = "" }: { className?: string }) {
 type ButtonProps = {
   href: string;
   variant?: Variant;
+  face?: keyof typeof faces;
   className?: string;
   arrow?: boolean;
   children: React.ReactNode;
@@ -44,6 +51,7 @@ type ButtonProps = {
 export function Button({
   href,
   variant = "primary",
+  face = "mono",
   className = "",
   arrow = true,
   children,
@@ -52,7 +60,7 @@ export function Button({
   return (
     <Link
       href={href}
-      className={`${base} ${variants[variant]} ${className}`}
+      className={`${base} ${faces[face]} ${variants[variant]} ${className}`}
       {...rest}
     >
       <span>{children}</span>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, DM_Mono } from "next/font/google";
+import { Archivo, DM_Mono, Poppins } from "next/font/google";
 
 import { NavBar } from "@/components/layout/nav-bar";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -20,6 +20,14 @@ const dmMono = DM_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-dm-mono",
+  display: "swap",
+});
+
+/** Header navigation face. */
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -49,7 +57,7 @@ export default function RootLayout({
        reports a false mismatch. It only covers this element's attributes. */
     <html
       lang="en-IN"
-      className={`${archivo.variable} ${dmMono.variable}`}
+      className={`${archivo.variable} ${dmMono.variable} ${poppins.variable}`}
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>

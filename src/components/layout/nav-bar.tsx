@@ -50,8 +50,8 @@ export function NavBar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`label rounded-[var(--radius-pill)] px-4 py-2.5 transition-colors duration-300 hover:text-brand ${
-                      active ? "text-ink" : "text-ink-50"
+                    className={`nav-link rounded-[var(--radius-pill)] px-4 py-3 transition-colors duration-300 hover:text-brand ${
+                      active ? "text-ink" : "text-ink-70"
                     }`}
                   >
                     {item.label}
@@ -64,6 +64,7 @@ export function NavBar() {
               <Button
                 href="/contact"
                 variant="primary"
+                face="nav"
                 className="hidden sm:inline-flex"
               >
                 Contact us
@@ -73,7 +74,7 @@ export function NavBar() {
                 onClick={() => setOpen((v) => !v)}
                 aria-expanded={open}
                 aria-label={open ? "Close menu" : "Open menu"}
-                className="label flex h-11 items-center gap-2.5 rounded-[var(--radius-pill)] border border-line px-4 lg:hidden"
+                className="nav-link flex h-11 items-center gap-2.5 rounded-[var(--radius-pill)] border border-line px-4 lg:hidden"
               >
                 {open ? "Close" : "Menu"}
                 <span className="flex flex-col gap-[3px]" aria-hidden="true">
