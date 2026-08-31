@@ -6,7 +6,7 @@ type Variant = "primary" | "ghost" | "invert" | "invert-ghost";
 const base =
   "group inline-flex items-center gap-3 rounded-[var(--radius-pill)] px-6 py-3.5 uppercase leading-none transition-colors duration-300 whitespace-nowrap";
 
-/** Type face for the label: the mono UI face by default, Poppins in the header. */
+/** Label treatment: the small tracked UI style by default, nav sizing in the header. */
 const faces = {
   mono: "font-mono text-[0.72rem] tracking-[0.12em]",
   nav: "nav-link",

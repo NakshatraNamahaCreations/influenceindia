@@ -3,8 +3,8 @@
 /* ============================================================
    Influence India Services — design tokens
    Layout / type system modelled on the reference site:
-   uppercase grotesque display type, Helvetica body,
-   mono UI labels, alternating black + paper sections.
+   uppercase display type, Montserrat throughout,
+   small tracked UI labels, alternating dark + paper sections.
    ============================================================ */
 
 @theme {
@@ -36,10 +36,12 @@
   --color-line-invert: rgba(255, 255, 255, 0.2);
   --color-line-invert-soft: rgba(255, 255, 255, 0.12);
 
-  --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-mono: var(--font-dm-mono), ui-monospace, "SF Mono", Menlo, monospace;
-  --font-nav: var(--font-poppins), "Helvetica Neue", Arial, sans-serif;
+  /* one family throughout — the four roles are kept as separate tokens so a
+     single role can be re-pointed later without touching every component */
+  --font-display: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+  --font-nav: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
 
   /* display scale — desktop / tablet / mobile of the reference */
   --text-d1: clamp(4.2rem, 7.4vw, 9.6rem);
@@ -92,7 +94,9 @@
     color: var(--color-ink);
     font-family: var(--font-body);
     font-size: 1rem;
-    line-height: 1.5;
+    /* Montserrat runs wider than Helvetica; a little more leading keeps long
+       paragraphs comfortable */
+    line-height: 1.6;
     /* clip, not hidden — `hidden` creates a scroll container and would break
        the sticky/pinned sections below */
     overflow-x: clip;
@@ -110,8 +114,10 @@
     font-family: var(--font-display);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: -0.015em;
-    line-height: 1.03;
+    /* Montserrat's uppercase is wider than Archivo's — it needs far less
+       negative tracking before the counters start closing up */
+    letter-spacing: -0.005em;
+    line-height: 1.06;
     text-wrap: balance;
   }
 
@@ -122,18 +128,20 @@
   .d5 { font-size: var(--text-d5); line-height: 1.08; }
   .d6 { font-size: var(--text-d6); line-height: 1.12; }
 
-  /* ---- mono UI label ---- */
+  /* small uppercase label — needs a touch more weight now it is no longer set
+     in a monospace face */
   .label {
     font-family: var(--font-mono);
     font-size: 0.75rem;
+    font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     line-height: 1.4;
   }
 
-  /* ---- header navigation: Poppins, sized for legibility ----
-     The mono `.label` face was too small and too widely tracked to read
-     comfortably at nav sizes. */
+  /* ---- header navigation ----
+     Sized larger and tracked tighter than `.label`, which was too small and
+     too widely spaced to read comfortably at nav sizes. */
   .nav-link {
     font-family: var(--font-nav);
     font-size: 0.875rem;

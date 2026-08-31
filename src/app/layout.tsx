@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, DM_Mono, Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 import { NavBar } from "@/components/layout/nav-bar";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -9,25 +9,14 @@ import { site } from "@/content/site";
 
 import "./globals.css";
 
-const archivo = Archivo({
+/**
+ * One family across the whole site — display headings, body copy, navigation
+ * and the small uppercase labels all resolve to Montserrat.
+ */
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-archivo",
-  display: "swap",
-});
-
-const dmMono = DM_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-dm-mono",
-  display: "swap",
-});
-
-/** Header navigation face. */
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-poppins",
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -57,7 +46,7 @@ export default function RootLayout({
        reports a false mismatch. It only covers this element's attributes. */
     <html
       lang="en-IN"
-      className={`${archivo.variable} ${dmMono.variable} ${poppins.variable}`}
+      className={montserrat.variable}
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>
