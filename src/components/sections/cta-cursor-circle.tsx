@@ -94,7 +94,7 @@ export function CtaCursorCircle({ href, label }: { href: string; label: string }
       <Link
         ref={discRef}
         href={href}
-        className="pointer-events-auto flex h-[6.25rem] w-[6.25rem] shrink-0 items-center justify-center rounded-full bg-accent px-3 text-center font-mono text-[0.66rem] uppercase leading-[1.35] tracking-[0.08em] text-paper will-change-transform"
+        className="pointer-events-auto flex h-[6.25rem] w-[6.25rem] shrink-0 items-center justify-center rounded-full bg-accent px-3 text-center font-mono text-[0.66rem] font-medium uppercase leading-[1.35] tracking-[0.08em] text-ink will-change-transform"
       >
         {label}
       </Link>

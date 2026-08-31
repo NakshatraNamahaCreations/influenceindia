@@ -220,7 +220,7 @@ export function EnquiryForm({
             </label>
 
             {status === "error" ? (
-              <p className="text-[0.9rem] text-accent" role="alert">
+              <p className="text-[0.9rem] text-danger" role="alert">
                 {message}
               </p>
             ) : null}

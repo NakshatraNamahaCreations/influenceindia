@@ -26,7 +26,7 @@ export function Accordion({
               aria-expanded={isOpen}
               className="group flex w-full items-start justify-between gap-8 py-6 text-left md:py-8"
             >
-              <span className="display d6 pr-4 transition-colors duration-300 group-hover:text-brand">
+              <span className={`display d6 pr-4 transition-colors duration-300 ${invert ? "group-hover:text-accent" : "group-hover:text-brand"}`}>
                 {item.q}
               </span>
               <span

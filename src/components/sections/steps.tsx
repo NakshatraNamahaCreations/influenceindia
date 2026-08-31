@@ -21,7 +21,7 @@ export function Steps({
         >
           <div className="grid gap-5 py-10 md:grid-cols-12 md:gap-8">
             <div className="md:col-span-3">
-              <span className="label text-brand">{item.step}</span>
+              <span className={`label ${tone === "invert" ? "text-accent" : "text-brand"}`}>{item.step}</span>
               <p className="display d2 mt-3 leading-none opacity-15">
                 {String(i + 1).padStart(2, "0")}
               </p>

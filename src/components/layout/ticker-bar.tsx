@@ -14,7 +14,7 @@ export function TickerBar() {
           items={items}
           duration={55}
           className="flex-1"
-          itemClassName="label px-6 text-paper/70 before:mr-6 before:text-brand before:content-['/']"
+          itemClassName="label px-6 text-paper/70 before:mr-6 before:text-accent before:content-['/']"
         />
         <span className="label hidden shrink-0 items-center gap-2 border-l border-line-invert px-5 text-paper/50 lg:flex">
           {"Future dreams, come true today"}

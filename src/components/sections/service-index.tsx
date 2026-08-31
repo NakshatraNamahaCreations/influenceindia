@@ -67,7 +67,7 @@ export function ServiceIndex({
           {/* ---- sticky index nav ---- */}
           <nav
             aria-label="Services"
-            className="lg:sticky lg:top-28 lg:col-span-3 lg:self-start"
+            className="lg:sticky lg:top-36 lg:col-span-3 lg:self-start"
           >
             {groups.map((group) => (
               <div key={group.label} className="mb-8">
@@ -108,7 +108,7 @@ export function ServiceIndex({
           </nav>
 
           {/* ---- sticky image + dashed rail ---- */}
-          <div className="hidden lg:sticky lg:top-28 lg:col-span-3 lg:block lg:self-start">
+          <div className="hidden lg:sticky lg:top-36 lg:col-span-3 lg:block lg:self-start">
             <div className="relative">
               <span
                 className={`absolute -left-8 top-0 bottom-0 border-l border-dashed ${

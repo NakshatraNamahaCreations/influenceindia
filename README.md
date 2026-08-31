@@ -49,13 +49,7 @@ src/content/
 
 Defined once in `src/app/globals.css`:
 
-| Token | Value | Use |
-|---|---|---|
-| `--color-ink` | `#111111` | text, inverted section backgrounds |
-| `--color-paper` | `#ffffff` | page background |
-| `--color-surface` | `#f4f4f4` | alternating section background |
-| `--color-brand` | `#0016cb` | primary accent, hovers, links |
-| `--color-accent` | `#ff5500` | emphasis words on dark sections |
+Colour tokens are listed under [Brand](#brand) below — all derived from the logo.
 
 Helper classes: `.display` + `.d1`–`.d6` (uppercase display headings),
 `.label` (mono UI label), `.lede`, `.shell` / `.shell-inner` / `.section-y`
@@ -67,6 +61,35 @@ Fonts as the closest free equivalents, with Helvetica Neue/Arial for body copy �
 matching the reference's body stack exactly. If you license BT Steinhart, swap
 `--font-display` in `globals.css` and the `next/font` import in
 `src/app/layout.tsx`.
+
+## Brand
+
+The palette is sampled directly from the supplied logo — no invented colours:
+
+| Token | Value | Role |
+|---|---|---|
+| `--color-ink` | `#2F2B2C` | the logo's charcoal — body text and dark sections |
+| `--color-brand` | `#5C7A1C` | darkened logo green; text accents on light (4.9:1 on white) |
+| `--color-brand-mid` | `#95B537` | the logo's core green |
+| `--color-accent` | `#C0D64E` | the logo's highlight lime — dark grounds only (9.4:1 on ink) |
+| `--color-surface` | `#F4F5EF` | off-white warmed toward the green |
+| `--color-danger` | `#B3261E` | form validation only |
+
+The split matters: the bright lime fails contrast on white, so anything
+text-bearing on a light ground uses the deep green, and the lime is reserved
+for dark grounds and fills. The CTA disc is lime with charcoal text (8.7:1)
+rather than white text (2.0:1).
+
+### Logo assets (`public/brand/`)
+
+Used exactly as supplied — mark, wordmark and tagline together, nothing re-set
+in web type.
+
+- `logo-full.png` — trimmed, transparent, for light grounds
+- `logo-full-light.png` — charcoal lifted to white, greens preserved, for the footer
+- `logo-mark.png` / `logo-mark-light.png` — the IIS symbol alone
+- `logo-original.png` — the untouched master
+- `src/app/icon.png` — favicon, generated from the mark
 
 ## Scroll behaviour
 

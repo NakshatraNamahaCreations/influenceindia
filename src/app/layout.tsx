@@ -44,8 +44,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" className={`${archivo.variable} ${dmMono.variable}`}>
-      <body>
+    /* suppressHydrationWarning: browser extensions (Grammarly, QuillBot, etc.)
+       inject attributes onto <html> before React hydrates, which otherwise
+       reports a false mismatch. It only covers this element's attributes. */
+    <html
+      lang="en-IN"
+      className={`${archivo.variable} ${dmMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body suppressHydrationWarning>
         <a
           href="#main"
           className="label sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-[var(--radius-pill)] focus:bg-ink focus:px-5 focus:py-3 focus:text-paper"

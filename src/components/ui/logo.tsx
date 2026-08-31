@@ -1,48 +1,44 @@
+import Image from "next/image";
 import Link from "next/link";
+
+/**
+ * The supplied Influence India Services lockup, used exactly as provided —
+ * mark, wordmark and tagline together, nothing re-set in web type.
+ *
+ * On dark grounds we swap to the `-light` variant, where the logo's charcoal
+ * elements are lifted to white and the greens are preserved; the charcoal
+ * would otherwise disappear against the footer.
+ */
+const sizes = {
+  md: "h-14 md:h-20",
+  lg: "h-24 md:h-32",
+} as const;
 
 export function Logo({
   tone = "default",
+  size = "md",
   className = "",
 }: {
   tone?: "default" | "invert";
+  size?: keyof typeof sizes;
   className?: string;
 }) {
-  const color = tone === "invert" ? "text-paper" : "text-ink";
-  const sub = tone === "invert" ? "text-paper/50" : "text-ink-50";
+  const invert = tone === "invert";
 
   return (
     <Link
       href="/"
-      className={`group flex items-center gap-3 ${color} ${className}`}
+      className={`group inline-flex shrink-0 items-center ${className}`}
       aria-label="Influence India Services — home"
     >
-      <svg
-        viewBox="0 0 44 24"
-        className="h-5 w-9 shrink-0"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 12c0-4.4-2.7-8-6-8s-6 3.6-6 8 2.7 8 6 8 6-3.6 6-8Zm0 0c0 4.4 2.7 8 6 8s6-3.6 6-8-2.7-8-6-8-6 3.6-6 8Z"
-          stroke="currentColor"
-          strokeWidth="2.4"
-          className="transition-[stroke] duration-300 group-hover:stroke-[var(--color-brand)]"
-        />
-        <path
-          d="M32 4v16M38 4v16"
-          stroke="currentColor"
-          strokeWidth="2.4"
-          opacity="0.25"
-        />
-      </svg>
-      <span className="flex flex-col leading-none">
-        <span className="display text-[0.95rem] tracking-[0.02em]">
-          Influence India
-        </span>
-        <span className={`label mt-1 text-[0.58rem] tracking-[0.22em] ${sub}`}>
-          Services
-        </span>
-      </span>
+      <Image
+        src={invert ? "/brand/logo-full-light.png" : "/brand/logo-full.png"}
+        alt=""
+        width={1200}
+        height={894}
+        priority
+        className={`${sizes[size]} w-auto transition-transform duration-500 group-hover:scale-[1.03]`}
+      />
     </Link>
   );
 }

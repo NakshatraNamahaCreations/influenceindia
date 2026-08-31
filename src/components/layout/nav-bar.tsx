@@ -37,7 +37,7 @@ export function NavBar() {
         }`}
       >
         <div className="shell">
-          <div className="shell-inner flex h-[4.5rem] items-center justify-between gap-8">
+          <div className="shell-inner flex h-[6rem] items-center justify-between gap-8 md:h-[7.5rem]">
             <Logo />
 
             <nav
@@ -99,7 +99,7 @@ export function NavBar() {
 
       {/* mobile overlay */}
       <div
-        className={`invert-section fixed inset-0 z-30 flex flex-col justify-between pt-[7.5rem] pb-10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
+        className={`invert-section fixed inset-0 z-30 flex flex-col justify-between pt-[11rem] pb-10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
           open
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -111,7 +111,7 @@ export function NavBar() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="display d4 border-b border-line-invert py-5 transition-colors duration-300 hover:text-brand"
+              className="display d4 border-b border-line-invert py-5 transition-colors duration-300 hover:text-accent"
               style={{
                 transitionDelay: open ? `${120 + i * 45}ms` : "0ms",
                 transform: open ? "none" : "translateY(1rem)",

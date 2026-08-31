@@ -11,7 +11,7 @@ export function SiteFooter() {
           {/* top: wordmark + tagline */}
           <div className="flex flex-col gap-8 border-b border-line-invert py-14 md:flex-row md:items-end md:justify-between">
             <div className="flex flex-col gap-6">
-              <Logo tone="invert" />
+              <Logo tone="invert" size="lg" />
               <p className="display d3 max-w-2xl">{site.tagline}</p>
             </div>
             <a
@@ -35,7 +35,7 @@ export function SiteFooter() {
                     <li key={`${col.title}-${link.label}`}>
                       <Link
                         href={link.href}
-                        className="text-[0.9rem] text-paper/75 transition-colors duration-300 hover:text-brand"
+                        className="text-[0.9rem] text-paper/75 transition-colors duration-300 hover:text-accent"
                       >
                         {link.label}
                       </Link>
@@ -71,13 +71,13 @@ export function SiteFooter() {
                 <div className="flex flex-col gap-1 text-[0.9rem] text-paper/75">
                   <a
                     href={`mailto:${contact.email}`}
-                    className="transition-colors hover:text-brand"
+                    className="transition-colors hover:text-accent"
                   >
                     {contact.email}
                   </a>
                   <a
                     href={`mailto:${contact.careersEmail}`}
-                    className="transition-colors hover:text-brand"
+                    className="transition-colors hover:text-accent"
                   >
                     {contact.careersEmail}
                   </a>

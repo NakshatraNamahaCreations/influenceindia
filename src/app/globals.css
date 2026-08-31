@@ -8,20 +8,31 @@
    ============================================================ */
 
 @theme {
-  --color-ink: #111111;
-  --color-ink-90: rgba(17, 17, 17, 0.88);
-  --color-ink-70: rgba(17, 17, 17, 0.72);
-  --color-ink-50: rgba(17, 17, 17, 0.5);
-  --color-ink-30: rgba(17, 17, 17, 0.3);
+  /* ---- palette, sampled directly from the Influence India logo ----
+     charcoal  #2F2B2C   the logo's dark grey (letterform, figure)
+     deep      #5C7A1C   darkened logo green — AA on white (4.9:1)
+     mid       #95B537   the logo's core green
+     bright    #C0D64E   the logo's highlight lime — used on dark
+     Text-bearing greens are the deep shade; the bright lime is reserved
+     for dark backgrounds and fills, where it clears AA comfortably. */
+  --color-ink: #2f2b2c;
+  --color-ink-90: rgba(47, 43, 44, 0.88);
+  --color-ink-70: rgba(47, 43, 44, 0.72);
+  --color-ink-50: rgba(47, 43, 44, 0.5);
+  --color-ink-30: rgba(47, 43, 44, 0.3);
   --color-paper: #ffffff;
-  --color-surface: #f4f4f4;
-  --color-surface-2: #ebebeb;
-  --color-brand: #0016cb;
-  --color-brand-soft: #edefff;
-  --color-accent: #ff5500;
+  --color-surface: #f4f5ef;
+  --color-surface-2: #e9ebe0;
+  --color-brand: #5c7a1c;
+  --color-brand-mid: #95b537;
+  --color-brand-bright: #c0d64e;
+  --color-brand-soft: #eef4dc;
+  /* accent = the logo's bright lime; only ever used on dark grounds */
+  --color-accent: #c0d64e;
+  --color-danger: #b3261e;
 
-  --color-line: rgba(17, 17, 17, 0.2);
-  --color-line-soft: rgba(17, 17, 17, 0.1);
+  --color-line: rgba(47, 43, 44, 0.2);
+  --color-line-soft: rgba(47, 43, 44, 0.1);
   --color-line-invert: rgba(255, 255, 255, 0.2);
   --color-line-invert-soft: rgba(255, 255, 255, 0.12);
 
@@ -248,7 +259,7 @@
   @media (min-width: 1024px) {
     .sticky-head {
       position: sticky;
-      top: 8.5rem;
+      top: 10.5rem;
       align-self: start;
     }
   }
