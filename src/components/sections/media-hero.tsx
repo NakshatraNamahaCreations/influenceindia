@@ -80,7 +80,7 @@ export function MediaHero({
             className="max-w-[16ch]"
           />
           {imageLabel && !src ? (
-            <p className="label mt-8 text-paper/35">{imageLabel}</p>
+            <p className="label mt-8 text-paper/50">{imageLabel}</p>
           ) : null}
         </div>
       </div>
@@ -92,7 +92,7 @@ export function MediaHero({
             items={ticker}
             duration={60}
             className="flex-1"
-            itemClassName="label px-6 text-[0.62rem] text-paper/60 before:mr-6 before:text-accent before:content-['·']"
+            itemClassName="label px-6 text-[0.62rem] text-paper/75 before:mr-6 before:text-accent before:content-['·']"
           />
         </div>
       </div>

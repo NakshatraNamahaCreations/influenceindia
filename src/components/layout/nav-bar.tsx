@@ -133,7 +133,7 @@ export function NavBar() {
           >
             Contact us
           </Button>
-          <div className="label flex flex-col gap-1 text-paper/50">
+          <div className="label flex flex-col gap-1 text-paper/65">
             <a href={`mailto:${contact.email}`} className="hover:text-paper">
               {contact.email}
             </a>

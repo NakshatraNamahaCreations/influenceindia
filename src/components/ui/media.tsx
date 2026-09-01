@@ -24,8 +24,8 @@ export function Media({
 }) {
   const tones = {
     light: "bg-surface text-ink-30",
-    dark: "bg-ink text-paper/30",
-    brand: "bg-brand text-paper/60",
+    dark: "bg-ink text-paper/45",
+    brand: "bg-brand text-paper/75",
   } as const;
 
   return (

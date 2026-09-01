@@ -11,7 +11,7 @@ export function Eyebrow({
     tone === "invert" ? "bg-paper" : tone === "brand" ? "bg-brand" : "bg-ink";
   const text =
     tone === "invert"
-      ? "text-paper/70"
+      ? "text-paper/85"
       : tone === "brand"
         ? "text-brand"
         : "text-ink-50";

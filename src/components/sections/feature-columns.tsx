@@ -8,8 +8,8 @@ export function FeatureColumns({
   tone?: "default" | "invert";
 }) {
   const border = tone === "invert" ? "border-line-invert" : "border-line";
-  const muted = tone === "invert" ? "text-paper/65" : "text-ink-70";
-  const index = tone === "invert" ? "text-paper/30" : "text-ink-30";
+  const muted = tone === "invert" ? "text-paper/80" : "text-ink-70";
+  const index = tone === "invert" ? "text-paper/45" : "text-ink-30";
 
   return (
     <div className={`grid border-t ${border} md:grid-cols-3`}>

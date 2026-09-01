@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
+import { Roadmap } from "@/components/sections/roadmap";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { HeadingLines } from "@/components/ui/heading-lines";
 import { Media } from "@/components/ui/media";
@@ -25,7 +26,11 @@ export const metadata: Metadata = {
 export default function GtpPage() {
   return (
     <>
-      <PageHero {...gtpHero} />
+      <PageHero
+        {...gtpHero}
+        image="/images/gtp-hero-v3.jpg"
+        imageAlt="Influence India colleagues in discussion at the office"
+      />
 
       {/* page body below the hero */}
       <div className="scroll-stack">
@@ -79,7 +84,7 @@ export default function GtpPage() {
                   <HeadingLines
                     lines={["Twenty-one footprints", "we are leaving behind"]}
                     mutedCount={1}
-                    size="d2"
+                    size="d3"
                     tone="invert"
                   />
                 </div>
@@ -95,23 +100,9 @@ export default function GtpPage() {
                 </Reveal>
               </div>
 
-              <ul className="mt-14 grid gap-px border-t border-line-invert bg-line-invert md:grid-cols-2 lg:grid-cols-3">
-                {footprints.map((item, i) => (
-                  <Reveal
-                    as="li"
-                    key={item}
-                    delay={(i % 3) * 60}
-                    className="group bg-ink p-7"
-                  >
-                    <span className="label text-paper/30 transition-colors duration-500 group-hover:text-accent">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <p className="mt-4 text-[0.95rem] leading-relaxed text-paper/75">
-                      {item}
-                    </p>
-                  </Reveal>
-                ))}
-              </ul>
+              <div className="mt-16">
+                <Roadmap items={footprints} />
+              </div>
             </div>
           </div>
         </section>

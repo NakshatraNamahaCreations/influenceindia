@@ -19,7 +19,11 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
   return (
     <>
-      <PageHero {...resourcesHero} />
+      <PageHero
+        {...resourcesHero}
+        image="/images/resources-hero.jpg"
+        imageAlt="Attendees taking notes at an Influence India skill and careers session"
+      />
 
       {/* page body below the hero */}
       <div className="scroll-stack">

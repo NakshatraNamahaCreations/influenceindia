@@ -59,7 +59,7 @@ export function EnquiryForm({
   const [topics, setTopics] = useState<string[]>([]);
 
   const border = tone === "invert" ? "border-line-invert" : "border-line";
-  const muted = tone === "invert" ? "text-paper/55" : "text-ink-50";
+  const muted = tone === "invert" ? "text-paper/70" : "text-ink-50";
   const inputBase = `w-full border-b bg-transparent py-3.5 text-[1rem] outline-none transition-colors duration-300 ${border} focus:border-brand placeholder:text-transparent`;
 
   function toggleTopic(topic: string) {
@@ -199,7 +199,7 @@ export function EnquiryForm({
                       className={`rounded-[var(--radius-pill)] border px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-colors duration-300 ${
                         active
                           ? "border-brand bg-brand text-paper"
-                          : `${border} ${tone === "invert" ? "text-paper/70 hover:border-paper" : "text-ink-70 hover:border-ink"}`
+                          : `${border} ${tone === "invert" ? "text-paper/85 hover:border-paper" : "text-ink-70 hover:border-ink"}`
                       }`}
                     >
                       {topic}

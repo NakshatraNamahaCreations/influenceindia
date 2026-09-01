@@ -3,39 +3,39 @@
   "assets": [
     {
       "slot": "promise-team",
-      "pexelsId": "12903168",
-      "query": "office team meeting",
-      "page": "https://www.pexels.com/photo/12903168/"
+      "pexelsId": "7581110",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581110/"
     },
     {
       "slot": "about-onboarding",
-      "pexelsId": "9870223",
-      "query": "job interview handshake",
-      "page": "https://www.pexels.com/photo/9870223/"
+      "pexelsId": "7580791",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7580791/"
     },
     {
       "slot": "hero-workforce",
-      "pexelsId": "4484152",
-      "query": "warehouse workers",
-      "page": "https://www.pexels.com/photo/4484152/"
+      "pexelsId": "7581229",
+      "query": "indian office team meeting",
+      "page": "https://www.pexels.com/video/7581229/"
     },
     {
       "slot": "cap-1",
-      "pexelsId": "31112238",
-      "query": "factory worker",
-      "page": "https://www.pexels.com/photo/31112238/"
+      "pexelsId": "7580651",
+      "query": "indian office document review",
+      "page": "https://www.pexels.com/photo/7580651/"
     },
     {
       "slot": "cap-3",
-      "pexelsId": "8204317",
-      "query": "call center",
-      "page": "https://www.pexels.com/photo/8204317/"
+      "pexelsId": "7581119",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581119/"
     },
     {
       "slot": "pillars-training",
-      "pexelsId": "416754",
-      "query": "training class",
-      "page": "https://www.pexels.com/photo/416754/"
+      "pexelsId": "35216547",
+      "query": "india skill training",
+      "page": "https://www.pexels.com/photo/35216547/"
     },
     {
       "slot": "svc-right-staffing",
@@ -45,9 +45,9 @@
     },
     {
       "slot": "svc-elevate-growth",
-      "pexelsId": "33175650",
-      "query": "business handshake",
-      "page": "https://www.pexels.com/photo/33175650/"
+      "pexelsId": "7581121",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581121/"
     },
     {
       "slot": "svc-pan-india",
@@ -57,21 +57,21 @@
     },
     {
       "slot": "svc-skill-adoption",
-      "pexelsId": "12965141",
-      "query": "vocational training",
-      "page": "https://www.pexels.com/photo/12965141/"
+      "pexelsId": "33755641",
+      "query": "india repair training course",
+      "page": "https://www.pexels.com/photo/33755641/"
     },
     {
       "slot": "svc-staffing-services",
-      "pexelsId": "7693692",
-      "query": "office team working",
-      "page": "https://www.pexels.com/photo/7693692/"
+      "pexelsId": "7581131",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581131/"
     },
     {
       "slot": "svc-managed-services",
-      "pexelsId": "8117476",
-      "query": "office team working",
-      "page": "https://www.pexels.com/photo/8117476/"
+      "pexelsId": "7580820",
+      "query": "indian office operations",
+      "page": "https://www.pexels.com/photo/7580820/"
     },
     {
       "slot": "platform-dos",
@@ -81,81 +81,69 @@
     },
     {
       "slot": "cap-2",
-      "pexelsId": "6326260",
-      "query": "office team working",
-      "page": "https://www.pexels.com/photo/6326260/"
-    },
-    {
-      "slot": "systems-team",
-      "pexelsId": "7653461",
-      "query": "office team working",
-      "page": "https://www.pexels.com/photo/7653461/"
+      "pexelsId": "7581114",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581114/"
     },
     {
       "slot": "careers-life",
-      "pexelsId": "3863830",
-      "query": "office team working",
-      "page": "https://www.pexels.com/photo/3863830/"
+      "pexelsId": "7581126",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581126/"
     },
     {
       "slot": "card-dos",
-      "pexelsId": "5257005",
-      "query": "teamwork",
-      "page": "https://www.pexels.com/photo/5257005/"
+      "pexelsId": "7581127",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581127/"
     },
     {
       "slot": "card-app",
-      "pexelsId": "5256819",
-      "query": "teamwork",
-      "page": "https://www.pexels.com/photo/5256819/"
+      "pexelsId": "7581117",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581117/"
     },
     {
-      "slot": "strip-1",
-      "pexelsId": "5426376",
-      "query": "teamwork",
-      "page": "https://www.pexels.com/photo/5426376/"
+      "slot": "strip-workforce",
+      "pexelsId": "7581113",
+      "query": "indian corporate professionals",
+      "page": "https://www.pexels.com/photo/7581113/"
     },
     {
-      "slot": "strip-2",
-      "pexelsId": "5833330",
-      "query": "teamwork",
-      "page": "https://www.pexels.com/photo/5833330/"
+      "slot": "strip-training",
+      "pexelsId": "34212681",
+      "query": "india practical skill training",
+      "page": "https://www.pexels.com/photo/34212681/"
     },
     {
-      "slot": "strip-3",
-      "pexelsId": "7644016",
-      "query": "teamwork",
-      "page": "https://www.pexels.com/photo/7644016/"
+      "slot": "strip-clients",
+      "pexelsId": "7580824",
+      "query": "indian client meeting",
+      "page": "https://www.pexels.com/photo/7580824/"
     },
     {
       "slot": "hero video (what-we-do)",
-      "pexelsId": "4281239",
-      "query": "warehouse workers",
-      "page": "https://www.pexels.com/video/working-men-warehouse-box-4281239/"
+      "pexelsId": "7581229",
+      "query": "indian office team meeting",
+      "page": "https://www.pexels.com/video/7581229/"
     },
     {
       "slot": "hero video (home)",
-      "pexelsId": "4629264",
-      "query": "office team",
-      "page": "https://www.pexels.com/video/a-group-of-people-working-together-inside-an-office-4629264/"
-    },
-    {
-      "slot": "home-pillars",
-      "pexelsId": "30945609",
-      "query": "classroom",
-      "page": "https://www.pexels.com/photo/30945609/"
+      "pexelsId": "7581212",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/video/7581212/"
     },
     {
       "slot": "gtp-community",
-      "pexelsId": "33415745",
-      "query": "classroom",
-      "page": "https://www.pexels.com/photo/33415745/"
+      "pexelsId": "3231359",
+      "query": "indian classroom",
+      "page": "https://www.pexels.com/photo/3231359/"
     },
     {
       "slot": "gtp-analytics",
-      "pexelsId": "5831343",
-      "query": "analytics",
-      "page": "https://www.pexels.com/photo/5831343/"
+      "pexelsId": "7580636",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7580636/"
     },
     {
       "slot": "bengaluru-city",
@@ -182,28 +170,22 @@
       "page": "https://www.pexels.com/photo/7457914/"
     },
     {
-      "slot": "systems-apply",
-      "pexelsId": "38766370",
-      "query": "mentor",
-      "page": "https://www.pexels.com/photo/38766370/"
-    },
-    {
       "slot": "careers-team",
-      "pexelsId": "38748858",
-      "query": "mentor",
-      "page": "https://www.pexels.com/photo/38748858/"
+      "pexelsId": "7581111",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7581111/"
     },
     {
       "slot": "video: training band",
-      "pexelsId": "5198159",
-      "query": "classroom teaching",
-      "page": "https://www.pexels.com/video/a-teacher-teaching-his-students-inside-a-classroom-5198159/"
+      "pexelsId": "7581342",
+      "query": "indian office training briefing",
+      "page": "https://www.pexels.com/video/7581342/"
     },
     {
       "slot": "video: study band",
-      "pexelsId": "8342354",
-      "query": "students studying",
-      "page": "https://www.pexels.com/video/students-studying-in-the-classroom-8342354/"
+      "pexelsId": "18685370",
+      "query": "india university campus",
+      "page": "https://www.pexels.com/video/18685370/"
     },
     {
       "slot": "video: city band",
@@ -216,6 +198,42 @@
       "pexelsId": "7580648",
       "query": "indian office",
       "page": "https://www.pexels.com/photo/7580648/"
+    },
+    {
+      "slot": "contact-hero",
+      "pexelsId": "7580644",
+      "query": "indian office team",
+      "page": "https://www.pexels.com/photo/7580644/"
+    },
+    {
+      "slot": "resources-hero",
+      "pexelsId": "34947115",
+      "query": "india seminar notes",
+      "page": "https://www.pexels.com/photo/34947115/"
+    },
+    {
+      "slot": "careers-hero",
+      "pexelsId": "7581125",
+      "query": "indian office new hire",
+      "page": "https://www.pexels.com/photo/7581125/"
+    },
+    {
+      "slot": "about-hero",
+      "pexelsId": "38032723",
+      "query": "indian young professionals",
+      "page": "https://www.pexels.com/photo/38032723/"
+    },
+    {
+      "slot": "systems-hero",
+      "pexelsId": "18067562",
+      "query": "young indian women working jaipur",
+      "page": "https://www.pexels.com/photo/18067562/"
+    },
+    {
+      "slot": "gtp-hero",
+      "pexelsId": "7580751",
+      "query": "indian office team discussion",
+      "page": "https://www.pexels.com/photo/7580751/"
     }
   ]
 }

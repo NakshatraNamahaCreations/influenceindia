@@ -12,36 +12,67 @@ export function FaqSection({
   items: readonly { q: string; a: string }[];
   tone?: "default" | "invert";
 }) {
+  const invert = tone === "invert";
+
   return (
     <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-      <div className="lg:col-span-4">
+      {/* ---- left rail: heading + the "still stuck?" card, sticky on desktop ---- */}
+      <div className="sticky-head lg:col-span-4">
         <Reveal>
-          <Eyebrow
-            tone={tone === "invert" ? "invert" : "default"}
-            className="mb-6"
-          >
+          <Eyebrow tone={invert ? "invert" : "default"} className="mb-6">
             F.A.Q
           </Eyebrow>
         </Reveal>
+
         <HeadingLines
           lines={["Straightforward", "answers"]}
-          size="d3"
-          tone={tone === "invert" ? "invert" : "default"}
+          size="d4"
+          tone={invert ? "invert" : "default"}
         />
+
         <Reveal delay={120}>
-          <p className="lede mt-6">So you can move forward with confidence.</p>
+          <p
+            className={`mt-5 max-w-sm text-[0.95rem] leading-relaxed ${
+              invert ? "text-paper/75" : "text-ink-70"
+            }`}
+          >
+            So you can move forward with confidence.
+          </p>
         </Reveal>
-        <Reveal delay={180}>
-          <div className="mt-8 flex flex-col gap-4">
+
+        <Reveal delay={160}>
+          <p
+            className={`label mt-7 flex items-center gap-3 ${
+              invert ? "text-paper/55" : "text-ink-30"
+            }`}
+          >
+            {String(items.length).padStart(2, "0")} questions
+            <span
+              aria-hidden="true"
+              className={`h-px flex-1 ${invert ? "bg-line-invert" : "bg-line"}`}
+            />
+          </p>
+        </Reveal>
+
+        <Reveal delay={220}>
+          <div
+            className={`mt-7 rounded-2xl border p-6 ${
+              invert
+                ? "border-white/12 bg-white/[0.04]"
+                : "border-line-soft bg-surface"
+            }`}
+          >
             <p
-              className={`text-[0.9rem] ${tone === "invert" ? "text-paper/55" : "text-ink-50"}`}
+              className={`text-[0.9rem] leading-relaxed ${
+                invert ? "text-paper/80" : "text-ink-70"
+              }`}
             >
-              Still have questions? Our team is here to help.
+              Still have questions? Our team answers within one working day.
             </p>
             <Button
               href={`mailto:${contact.email}`}
-              variant={tone === "invert" ? "invert" : "primary"}
-              className="w-fit"
+              variant={invert ? "invert" : "primary"}
+              className="mt-5 w-fit"
             >
               Email us
             </Button>
@@ -49,8 +80,9 @@ export function FaqSection({
         </Reveal>
       </div>
 
+      {/* ---- the questions ---- */}
       <div className="lg:col-span-8">
-        <Accordion items={items} invert={tone === "invert"} />
+        <Accordion items={items} invert={invert} />
       </div>
     </div>
   );

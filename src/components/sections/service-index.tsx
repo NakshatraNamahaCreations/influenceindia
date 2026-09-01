@@ -93,7 +93,7 @@ export function ServiceIndex({
                                 ? "bg-paper text-ink"
                                 : "bg-ink text-paper"
                               : dark
-                                ? "text-paper/55 hover:text-paper"
+                                ? "text-paper/70 hover:text-paper"
                                 : "text-ink-50 hover:text-ink"
                           }`}
                         >
@@ -161,7 +161,7 @@ export function ServiceIndex({
                       </p>
                     </div>
                     <span
-                      className={`label shrink-0 pt-2 text-[0.6rem] ${dark ? "text-paper/30" : "text-ink-30"}`}
+                      className={`label shrink-0 pt-2 text-[0.6rem] ${dark ? "text-paper/45" : "text-ink-30"}`}
                       aria-hidden="true"
                     >
                       {String(i + 1).padStart(2, "0")}
@@ -173,7 +173,7 @@ export function ServiceIndex({
                       <p
                         key={paragraph.slice(0, 24)}
                         className={`max-w-xl text-[0.95rem] leading-relaxed ${
-                          dark ? "text-paper/70" : "text-ink-70"
+                          dark ? "text-paper/85" : "text-ink-70"
                         }`}
                       >
                         {paragraph}

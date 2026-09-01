@@ -27,7 +27,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero {...aboutHero} />
+      <PageHero
+        {...aboutHero}
+        image="/images/about-hero.jpg"
+        imageAlt="Young Influence India professionals ready for deployment"
+      />
 
       {/* page body below the hero */}
       <div className="scroll-stack">
@@ -117,7 +121,7 @@ export default function AboutPage() {
                   <HeadingLines lines={[infinity.heading]} size="d2" />
                   <Reveal delay={160}>
                     <p
-                      className="display mt-12 text-[clamp(6rem,14vw,13rem)] leading-none text-accent"
+                      className="display mt-12 text-[clamp(5rem,11.8vw,11rem)] leading-none text-accent"
                       aria-hidden="true"
                     >
                       &infin;

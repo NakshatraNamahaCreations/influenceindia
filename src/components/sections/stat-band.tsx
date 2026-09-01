@@ -17,7 +17,7 @@ export function StatBand({
   surface?: string;
 }) {
   const border = tone === "invert" ? "border-line-invert" : "border-line";
-  const muted = tone === "invert" ? "text-paper/50" : "text-ink-50";
+  const muted = tone === "invert" ? "text-paper/65" : "text-ink-50";
   const divider = tone === "invert" ? "bg-line-invert" : "bg-line";
   const cell = tone === "invert" ? "bg-ink" : surface;
 

@@ -14,26 +14,31 @@ export const benefits = [
   {
     index: "01",
     title: "Above industry compensation",
+    icon: "pay" as const,
     body: "Being part of our team guarantees financial acknowledgement of your skill, with above-industry compensation, incentives and refreshing programs.",
   },
   {
     index: "02",
     title: "Financial inclusion",
+    icon: "inclusion" as const,
     body: "We promote financial inclusion through schemes for children's education, health and economic stability.",
   },
   {
     index: "03",
     title: "Family wellness benefits",
+    icon: "wellness" as const,
     body: "We offer health camps, health insurance and paternity leave to take care of you and your family.",
   },
   {
     index: "04",
     title: "Skill recognition",
+    icon: "recognition" as const,
     body: "We value good work and responsibility, with rewards and recognition programs for outstanding performers.",
   },
   {
     index: "05",
     title: "Career growth",
+    icon: "growth" as const,
     body: "Internal exams, certification and promoted profiles make up 75% of our management roles.",
   },
 ];

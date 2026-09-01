@@ -28,7 +28,11 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <>
-      <PageHero {...careersHero} />
+      <PageHero
+        {...careersHero}
+        image="/images/careers-hero.jpg"
+        imageAlt="Influence India team welcoming a new hire at the office"
+      />
 
       {/* page body below the hero */}
       <div className="scroll-stack">
@@ -86,13 +90,13 @@ export default function CareersPage() {
         </section>
 
         {/* ---------- word from our team ---------- */}
-        <section className="invert-section">
+        <section className="border-t border-line bg-paper">
           <div className="shell">
             <div className="shell-inner section-y">
               <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
                 <div className="lg:col-span-7">
                   <Reveal>
-                    <Eyebrow tone="invert" className="mb-6">
+                    <Eyebrow className="mb-6">
                       A word from our team
                     </Eyebrow>
                   </Reveal>
@@ -100,7 +104,6 @@ export default function CareersPage() {
                     lines={["Moments from our", "stories of success"]}
                     mutedCount={1}
                     size="d3"
-                    tone="invert"
                   />
                 </div>
                 <Reveal delay={140} className="lg:col-span-5 lg:pb-2">

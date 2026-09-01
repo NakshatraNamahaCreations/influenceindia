@@ -74,7 +74,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Sustainable staffing for end-to-end recruitment needs, provided across PAN-India locations through our proprietary staffing management solution and experienced trainers.",
           "A centralised network and team operating centre ensures recruitment efficiency and transparency, with experts optimising skilling and educating while ensuring zero compliance gaps with clients.",
         ],
-        image: "/images/svc-managed-services.jpg",
+        image: "/images/svc-managed-services-v2.jpg",
         imageLabel: "Central operating centre",
       },
       {
@@ -85,7 +85,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Accelerate your work efficiency and quality while future-proofing your recognition — empowering your organisation to adopt skill and drive positive change across the working sector.",
           "Tailored end-to-end staffing management for corporate and hospitality industries, with suitable staff deployed to a work structure built to fit, and expert training supporting every individual entity.",
         ],
-        image: "/images/svc-skill-adoption.jpg",
+        image: "/images/svc-skill-adoption-v2.jpg",
         imageLabel: "Skill training programme",
       },
     ],
@@ -124,7 +124,7 @@ export const serviceGroups: ServiceGroup[] = [
           "A unique platform that unlocks insights, maximises impact and delivers convenience — comprehensive features and cutting-edge technology for an ever-growing industry.",
           "Advanced telematics give real-time availability of recruiters and recruitments, with a tracking app offering 100% placement and sourcing facility on a sustainable, scalable and secure base.",
         ],
-        image: "/images/cap-1.jpg",
+        image: "/images/cap-1-v2.jpg",
         imageLabel: "Tracking application",
       },
       {
@@ -195,9 +195,9 @@ export const platformCards = [
 export const capabilityStrip = {
   body: "We deliver scalable staffing solutions tailored to modern business demands — helping entities reduce attrition, improve workforce visibility, and deploy skilled people efficiently with confidence across corporate and non-corporate sectors.",
   images: [
-    { label: "Deployed workforce", src: "/images/strip-1.jpg" },
-    { label: "Training centre", src: "/images/strip-2.jpg" },
-    { label: "Client operations", src: "/images/strip-3.jpg" },
+    { label: "Deployed workforce", src: "/images/strip-workforce.jpg" },
+    { label: "Training centre", src: "/images/strip-training.jpg" },
+    { label: "Client operations", src: "/images/strip-clients.jpg" },
   ],
 };
 

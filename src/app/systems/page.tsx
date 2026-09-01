@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
+import { BenefitCards } from "@/components/sections/benefit-cards";
 import { CtaBand } from "@/components/sections/cta-band";
 import { FaqSection } from "@/components/sections/faq-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { Steps } from "@/components/sections/steps";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { HeadingLines } from "@/components/ui/heading-lines";
-import { Media } from "@/components/ui/media";
 import { Reveal } from "@/components/ui/reveal";
 import { closingCta } from "@/content/home";
 import { faqs } from "@/content/partners";
@@ -21,61 +21,45 @@ export const metadata: Metadata = {
 export default function SystemsPage() {
   return (
     <>
-      <PageHero {...systemsHero} />
+      <PageHero
+        {...systemsHero}
+        image="/images/systems-hero.jpg"
+        imageAlt="Team members working together at the Influence India office"
+      />
 
       {/* page body below the hero */}
       <div className="scroll-stack">
         {/* ---------- join and grow ---------- */}
         <section className="shell">
           <div className="shell-inner section-y">
-            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-              <div className="sticky-head lg:col-span-5">
+            <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+              <div className="lg:col-span-7">
                 <Reveal>
                   <Eyebrow className="mb-7">Unbeatable benefits</Eyebrow>
                 </Reveal>
                 <HeadingLines
                   lines={["Join and grow together", "for a better career"]}
                   mutedCount={1}
-                  size="d2"
+                  size="d3"
                 />
-                <Reveal delay={140}>
-                  <p className="lede mt-8">
-                    Grow up to infinite in your career. Join the future
-                    community of staffing solutions built around your career
-                    goals.
-                  </p>
-                </Reveal>
-                <Reveal delay={200}>
-                  <div className="mt-10">
-                    <Media src="/images/systems-team.jpg" alt="Influence India team" ratio="4/3" />
-                  </div>
-                </Reveal>
               </div>
+              <Reveal delay={140} className="lg:col-span-5 lg:pb-2">
+                <p className="lede">
+                  Grow up to infinite in your career. Join the future community
+                  of staffing solutions built around your career goals.
+                </p>
+              </Reveal>
+            </div>
 
-              <div className="lg:col-span-6 lg:col-start-7">
-                <ul className="border-t border-line">
-                  {benefits.map((benefit, i) => (
-                    <Reveal
-                      as="li"
-                      key={benefit.index}
-                      delay={i * 70}
-                      className="border-b border-line"
-                    >
-                      <div className="group grid gap-3 py-8 md:grid-cols-12 md:gap-6">
-                        <span className="label text-ink-30 md:col-span-1">
-                          {benefit.index}
-                        </span>
-                        <h3 className="display d6 transition-colors duration-500 group-hover:text-brand md:col-span-5">
-                          {benefit.title}
-                        </h3>
-                        <p className="text-[0.93rem] leading-relaxed text-ink-70 md:col-span-6">
-                          {benefit.body}
-                        </p>
-                      </div>
-                    </Reveal>
-                  ))}
-                </ul>
-              </div>
+            <div className="mt-14">
+              <BenefitCards
+                items={benefits}
+                cta={{
+                  label: "Start your application",
+                  href: "/contact",
+                  body: "Four steps from first contact to a certified job role. Talk to our Bengaluru team and we will take it from there.",
+                }}
+              />
             </div>
           </div>
         </section>
@@ -98,7 +82,7 @@ export default function SystemsPage() {
                       "trusted service provider",
                     ]}
                     mutedCount={2}
-                    size="d2"
+                    size="d3"
                     tone="invert"
                   />
                 </div>
@@ -111,18 +95,17 @@ export default function SystemsPage() {
                     top-notch service to our clients. Four steps, from first
                     contact to certified deployment.
                   </p>
-                  <div className="mt-8">
-                    <Media
-                      src="/images/systems-apply.jpg"
-                      alt="Application and interview"
-                      ratio="16/10"
-                      tone="dark"
+                  <p className="label mt-8 flex items-center gap-3 text-paper/55">
+                    {String(steps.length).padStart(2, "0")} steps
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-line-invert"
                     />
-                  </div>
+                  </p>
                 </Reveal>
               </div>
 
-              <div className="mt-14">
+              <div className="mt-16">
                 <Steps steps={steps} tone="invert" />
               </div>
             </div>

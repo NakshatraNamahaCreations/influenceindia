@@ -53,7 +53,7 @@ export function CtaBand({
           </div>
 
           <Reveal delay={140}>
-            <p className="mx-auto mt-8 max-w-[21rem] text-[0.92rem] leading-relaxed text-paper/60">
+            <p className="mx-auto mt-8 max-w-[21rem] text-[0.92rem] leading-relaxed text-paper/75">
               {body}
             </p>
           </Reveal>
@@ -65,7 +65,7 @@ export function CtaBand({
                   <Link
                     key={cta.label}
                     href={cta.href}
-                    className="label text-paper/50 underline underline-offset-4 transition-colors duration-300 hover:text-paper"
+                    className="label text-paper/65 underline underline-offset-4 transition-colors duration-300 hover:text-paper"
                   >
                     {cta.label}
                   </Link>

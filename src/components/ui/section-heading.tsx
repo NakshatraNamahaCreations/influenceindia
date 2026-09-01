@@ -11,7 +11,7 @@ export function SectionHeading({
   body,
   cta,
   tone = "default",
-  size = "d2",
+  size = "d3",
   className = "",
 }: {
   eyebrow?: string;

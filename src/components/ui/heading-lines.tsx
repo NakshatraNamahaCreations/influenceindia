@@ -32,7 +32,10 @@ export function HeadingLines({
   accentCount?: number;
 }) {
   const accent = tone === "invert" ? "text-accent" : "text-brand";
-  const muted = tone === "invert" ? "text-paper/35" : "text-ink-30";
+  /* the logo's two colours in one line — green bleeding through the grey,
+     drifting slowly so the muted lines are never flat */
+  const muted =
+    tone === "invert" ? "text-brand-sweep-invert" : "text-brand-sweep";
 
   const renderLine = (line: string) => {
     if (emphasis && line.includes(emphasis)) {

@@ -25,6 +25,8 @@ export const contact = {
   email: "contact@projectinfluenceindia.com",
   careersEmail: "careers@projectinfluenceindia.com",
   hotline: "1800 000 000",
+  /** Digits only, with country code and no "+" — used to build the wa.me link. */
+  whatsapp: "919000000000",
   hours: "Monday – Saturday / 9:00AM – 6:00PM",
 } as const;
 
