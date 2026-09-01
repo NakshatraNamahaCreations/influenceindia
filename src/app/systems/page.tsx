@@ -3,15 +3,14 @@ import type { Metadata } from "next";
 import { CtaBand } from "@/components/sections/cta-band";
 import { FaqSection } from "@/components/sections/faq-section";
 import { PageHero } from "@/components/sections/page-hero";
-import { PartnerMarquee } from "@/components/sections/partner-marquee";
 import { Steps } from "@/components/sections/steps";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { HeadingLines } from "@/components/ui/heading-lines";
 import { Media } from "@/components/ui/media";
 import { Reveal } from "@/components/ui/reveal";
 import { closingCta } from "@/content/home";
-import { faqs, partnersRowOne, partnersRowTwo } from "@/content/partners";
-import { benefits, partnersIntro, steps, systemsHero } from "@/content/systems";
+import { faqs } from "@/content/partners";
+import { benefits, steps, systemsHero } from "@/content/systems";
 
 export const metadata: Metadata = {
   title: "Job eco-system",
@@ -127,18 +126,6 @@ export default function SystemsPage() {
                 <Steps steps={steps} tone="invert" />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ---------- clients ---------- */}
-        <section className="shell">
-          <div className="shell-inner section-y">
-            <PartnerMarquee
-              eyebrow={partnersIntro.eyebrow}
-              heading={partnersIntro.heading}
-              body={partnersIntro.body}
-              rows={[partnersRowOne, partnersRowTwo]}
-            />
           </div>
         </section>
 

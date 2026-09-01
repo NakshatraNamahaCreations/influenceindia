@@ -4,7 +4,6 @@ import { EcosystemDiagram } from "@/components/sections/ecosystem-diagram";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FeatureColumns } from "@/components/sections/feature-columns";
 import { Hero } from "@/components/sections/hero";
-import { PartnerMarquee } from "@/components/sections/partner-marquee";
 import { PromiseModule } from "@/components/sections/promise-module";
 import { ServiceGrid } from "@/components/sections/service-grid";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -24,7 +23,7 @@ import {
   testimonialsSection,
   whyUs,
 } from "@/content/home";
-import { faqs, partnersRowOne, partnersRowTwo } from "@/content/partners";
+import { faqs } from "@/content/partners";
 import { pillars, services } from "@/content/services";
 
 export default function HomePage() {
@@ -239,18 +238,6 @@ export default function HomePage() {
                 <Testimonials items={testimonialsSection.items} />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ---------- partners ---------- */}
-        <section className="shell">
-          <div className="shell-inner section-y">
-            <PartnerMarquee
-              eyebrow="Our clients"
-              heading="Get a chance to work with"
-              body="Our certified aspirants are deployed into roles across some of the most demanding entities operating in India."
-              rows={[partnersRowOne, partnersRowTwo]}
-            />
           </div>
         </section>
 

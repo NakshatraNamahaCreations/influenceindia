@@ -1,5 +1,5 @@
 import { Marquee } from "@/components/ui/marquee";
-import { ticker, tickerNews } from "@/content/site";
+import { site, ticker, tickerNews } from "@/content/site";
 
 export function TickerBar() {
   const items = [...ticker, ...tickerNews].map((t) => t);
@@ -16,8 +16,8 @@ export function TickerBar() {
           className="flex-1"
           itemClassName="label px-6 text-paper/70 before:mr-6 before:text-accent before:content-['/']"
         />
-        <span className="label hidden shrink-0 items-center gap-2 border-l border-line-invert px-5 text-paper/50 lg:flex">
-          {"Future dreams, come true today"}
+        <span className="label hidden shrink-0 items-center gap-2 border-l border-line-invert px-5 text-accent lg:flex">
+          {site.tagline}
         </span>
       </div>
     </div>

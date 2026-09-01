@@ -1,7 +1,7 @@
 export const site = {
   name: "Influence India Services",
   shortName: "Influence India",
-  tagline: "Future dreams, come true today",
+  tagline: "Your future dreams come true today",
   description:
     "Influence India Services is a sustainable staffing and job-providing-as-a-service company — sourcing, training, certifying and managing skilled workforces for corporate and non-corporate entities across India.",
   url: "https://projectinfluenceindia.com",

@@ -60,9 +60,3 @@ export const steps = [
     body: "Once you successfully clear the tests and complete the necessary procedures, you will be ready for deployment in a certified job role within our entity.",
   },
 ];
-
-export const partnersIntro = {
-  eyebrow: "Our clients",
-  heading: "Get a chance to work with",
-  body: "Our aspirants are deployed into certified roles across some of the most demanding entities operating in India.",
-};

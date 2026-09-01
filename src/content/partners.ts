@@ -1,19 +1,3 @@
-/** Client entities aspirants get the chance to work with (from the brief). */
-export const partnersRowOne = [
-  "Infosys", "IndoSpace", "Optum", "Palo Alto", "Salesforce", "Samsung", "SAP",
-  "Shell", "Telstra", "The Lalit", "Tata Consultancy", "Bosch", "VMware", "Volvo",
-  "ZS", "EY", "Wells Fargo", "Wipro", "Google", "Citrix", "ITC", "Unisys", "JLL",
-  "Daimler", "IDFC Bank", "[24]7.ai", "NatWest", "Accenture",
-];
-
-export const partnersRowTwo = [
-  "Adobe", "Novartis", "AON", "Barclays", "L'Oréal", "BT", "Bajaj Allianz",
-  "Genpact", "Concentrix", "Maersk", "ADP", "H&M", "HGS", "Air India",
-  "Hindustan Unilever", "BNP Paribas", "JP Morgan Chase & Co", "AXA",
-  "Mercedes-Benz", "DuPont", "PwC", "eClerx", "Sasken", "Fiserv", "Incedo",
-  "Amphenol", "Airtel", "Jio",
-];
-
 export const faqs = [
   {
     q: "What is expected from an Influence India service provider?",
