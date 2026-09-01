@@ -51,7 +51,7 @@ export function NavBar() {
                     key={item.href}
                     href={item.href}
                     className={`nav-link rounded-[var(--radius-pill)] px-4 py-3 transition-colors duration-300 hover:text-brand ${
-                      active ? "text-ink" : "text-ink-70"
+                      active ? "text-brand" : "text-ink"
                     }`}
                   >
                     {item.label}
