@@ -183,10 +183,10 @@ export function ServiceIndex({
 
                   <a
                     href={ctaHref}
-                    className={`group mt-9 inline-flex items-center gap-3 rounded-[var(--radius-pill)] border px-6 py-3.5 font-mono text-[0.7rem] uppercase leading-none tracking-[0.1em] transition-colors duration-300 ${
+                    className={`group mt-9 inline-flex items-center gap-3 rounded-[var(--radius-pill)] border px-6 py-3.5 font-mono text-[0.7rem] uppercase leading-none tracking-[0.1em] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 ${
                       dark
-                        ? "border-line-invert text-paper hover:bg-paper hover:text-ink"
-                        : "border-line text-ink hover:bg-ink hover:text-paper"
+                        ? "border-accent/45 bg-accent/10 text-accent hover:bg-accent hover:text-ink"
+                        : "border-brand/45 bg-brand-soft text-brand hover:bg-brand hover:text-paper"
                     }`}
                   >
                     {ctaLabel}

@@ -283,10 +283,10 @@ export function EnquiryForm({
             <button
               type="submit"
               disabled={status === "sending"}
-              className={`group inline-flex w-fit items-center gap-3 rounded-[var(--radius-pill)] px-7 py-4 font-mono text-[0.72rem] uppercase leading-none tracking-[0.12em] transition-colors duration-300 disabled:opacity-50 ${
+              className={`group inline-flex w-fit items-center gap-3 rounded-[var(--radius-pill)] px-7 py-4 font-mono text-[0.72rem] uppercase leading-none tracking-[0.12em] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 disabled:translate-y-0 disabled:opacity-50 ${
                 tone === "invert"
-                  ? "bg-paper text-ink hover:bg-brand hover:text-paper"
-                  : "bg-ink text-paper hover:bg-brand"
+                  ? "bg-accent text-ink shadow-[0_10px_26px_-12px_rgba(192,214,78,0.75)] hover:bg-paper"
+                  : "bg-brand text-paper shadow-[0_10px_24px_-12px_rgba(92,122,28,0.9)] hover:bg-ink"
               }`}
             >
               {status === "sending" ? "Sending…" : "Submit enquiry"}
