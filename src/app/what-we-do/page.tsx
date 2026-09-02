@@ -30,7 +30,7 @@ export default function WhatWeDoPage() {
       <MediaHero
         eyebrow="What we do"
         headingLines={["Nationwide", "workforce", "coverage"]}
-        mutedCount={0}
+        mutedCount={2}
         src="/images/hero-workforce.jpg"
         video="/videos/hero-workforce.mp4"
         ticker={servicesHeroTicker}
