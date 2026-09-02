@@ -2,8 +2,10 @@
  * The commitments as two counter-running belts.
  *
  * Pure CSS: each belt holds its half of the list twice and slides by exactly
- * 50%, so the loop is seamless with no JS and no measurement. Hovering pauses
- * the belt under the cursor (`.marquee-track:hover`), and the whole animation
+ * 50%, so the loop is seamless with no JS and no measurement. The belts run
+ * edge to edge with no mask, so cards stay at full contrast on both sides.
+ * Hovering pauses the belt under the cursor (`.marquee-track:hover`), and the
+ * whole animation
  * is off under reduced motion, where it degrades to a horizontally scrollable
  * row rather than a frozen one.
  */
@@ -25,7 +27,7 @@ export function ValueMarquee({
       {rows.map((row) => (
         <div
           key={row.offset}
-          className="mask-fade-x overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <div
             className={`marquee-track gap-4 ${row.reverse ? "marquee-reverse" : ""}`}
