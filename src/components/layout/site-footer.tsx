@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Locations } from "@/components/ui/locations";
 import { Logo } from "@/components/ui/logo";
 import { contact, developer, footerColumns, legalLinks, site } from "@/content/site";
 
@@ -61,9 +62,7 @@ export function SiteFooter() {
 
               <div className="flex flex-col gap-3">
                 <p className="label text-paper/55">Locations</p>
-                <p className="text-[0.9rem] text-paper/88">
-                  {contact.locations.join(" / ")}
-                </p>
+                <Locations items={contact.locations} />
               </div>
 
               <div className="flex flex-col gap-3">

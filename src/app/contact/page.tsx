@@ -4,6 +4,7 @@ import { EnquiryForm } from "@/components/sections/enquiry-form";
 import { FaqSection } from "@/components/sections/faq-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { Locations } from "@/components/ui/locations";
 import { Reveal } from "@/components/ui/reveal";
 import { faqs } from "@/content/partners";
 import { contact } from "@/content/site";
@@ -142,23 +143,11 @@ export default function ContactPage() {
             <Reveal delay={120}>
               <div className="mt-12 flex flex-col gap-5 border-t border-line pt-9">
                 <Eyebrow>Our locations</Eyebrow>
-                <ul className="flex flex-wrap gap-2">
-                  {contact.locations.map((location, i) => (
-                    <li
-                      key={location}
-                      className={`rounded-[var(--radius-pill)] px-5 py-2.5 font-mono text-[0.72rem] uppercase tracking-[0.1em] ${
-                        i === 0
-                          ? "bg-ink text-paper"
-                          : "border border-line text-ink-70"
-                      }`}
-                    >
-                      {location}
-                      {i === 0 ? (
-                        <span className="ml-2 text-accent">HQ</span>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
+                <Locations
+                  items={contact.locations}
+                  variant="pills"
+                  tone="default"
+                />
               </div>
             </Reveal>
           </div>
