@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import { ArrowIcon } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { HeadingLines } from "@/components/ui/heading-lines";
 import { Reveal } from "@/components/ui/reveal";
 import { enquiryTopics } from "@/content/services";
 import { contact } from "@/content/site";
@@ -121,15 +120,37 @@ export function EnquiryForm({
             Need to know more?
           </Eyebrow>
         </Reveal>
-        <HeadingLines
-          lines={[
-            "Share your details",
-            "and our representative",
-            "will contact you.",
-          ]}
-          size="d2"
-          tone={tone === "invert" ? "invert" : "default"}
-        />
+        {/* Set in the display face but sentence case, and a step smaller than a
+            section heading: at d2 in a five-column well it broke mid-word. Each
+            line rises on its own delay, and the middle line carries the logo's
+            green-to-grey sweep. */}
+        <Reveal mode="trigger">
+          <h2 className="font-display text-[clamp(1.5rem,2.2vw,2.4rem)] font-semibold leading-[1.2] tracking-[-0.02em]">
+            {[
+              { text: "Share your details", tint: "" },
+              {
+                text: "and our representative",
+                tint:
+                  tone === "invert"
+                    ? "text-brand-sweep-invert"
+                    : "text-brand-sweep",
+              },
+              {
+                text: "will contact you.",
+                tint: tone === "invert" ? "text-accent" : "text-brand",
+              },
+            ].map((line, i) => (
+              <span key={line.text} className="line-mask">
+                <span
+                  className={line.tint}
+                  style={{ ["--line-delay" as string]: `${i * 110}ms` }}
+                >
+                  {line.text}
+                </span>
+              </span>
+            ))}
+          </h2>
+        </Reveal>
         <Reveal delay={140}>
           <div className={`mt-9 flex flex-col gap-1 border-t pt-7 ${border}`}>
             <p className={`label ${muted}`}>Or reach us directly</p>
@@ -196,12 +217,34 @@ export function EnquiryForm({
                       type="button"
                       onClick={() => toggleTopic(topic)}
                       aria-pressed={active}
-                      className={`rounded-[var(--radius-pill)] border px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-colors duration-300 ${
+                      className={`group inline-flex items-center gap-2 rounded-[var(--radius-pill)] border px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                         active
-                          ? "border-brand bg-brand text-paper"
-                          : `${border} ${tone === "invert" ? "text-paper/85 hover:border-paper" : "text-ink-70 hover:border-ink"}`
+                          ? "-translate-y-0.5 border-brand bg-brand text-paper shadow-[0_8px_22px_-10px_rgba(92,122,28,0.85)]"
+                          : tone === "invert"
+                            ? "border-white/20 bg-white/[0.04] text-paper/85 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+                            : "border-brand/25 bg-brand-soft/60 text-brand hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft"
                       }`}
                     >
+                      <span
+                        aria-hidden="true"
+                        className={`grid transition-all duration-300 ${
+                          active
+                            ? "w-3 opacity-100"
+                            : "w-0 opacity-0 group-hover:w-3 group-hover:opacity-60"
+                        }`}
+                      >
+                        <svg
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-3 w-3"
+                        >
+                          <path d="M2 6.5 4.8 9.2 10 3.5" />
+                        </svg>
+                      </span>
                       {topic}
                     </button>
                   );
