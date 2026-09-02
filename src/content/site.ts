@@ -34,7 +34,7 @@ export const contact = {
   hotline: "1800 000 000",
   /** Digits only, with country code and no "+" — used to build the wa.me link. */
   whatsapp: "919606329992",
-  hours: "Monday – Saturday / 9:00AM – 6:00PM",
+  hours: "Monday – Saturday / 10:00AM – 6:00PM",
 } as const;
 
 /** Slim ticker strip above the main navigation. */
