@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
 import { StatBand } from "@/components/sections/stat-band";
+import { ValueMarquee } from "@/components/sections/value-marquee";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { HeadingLines } from "@/components/ui/heading-lines";
 import { Media } from "@/components/ui/media";
@@ -78,28 +79,14 @@ export default function AboutPage() {
                   <HeadingLines
                     lines={["Twelve commitments", "behind every placement"]}
                     mutedCount={1}
-                    size="d2"
+                    size="d3"
                   />
                 </div>
               </div>
 
-              <ul className="mt-14 grid gap-px border-t border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-                {valuePoints.map((point, i) => (
-                  <Reveal
-                    as="li"
-                    key={point}
-                    delay={(i % 3) * 70}
-                    className="group bg-surface p-8"
-                  >
-                    <span className="label text-ink-30">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <p className="display d6 mt-5 transition-colors duration-500 group-hover:text-brand">
-                      {point}
-                    </p>
-                  </Reveal>
-                ))}
-              </ul>
+              <Reveal className="mt-14">
+                <ValueMarquee items={valuePoints} />
+              </Reveal>
             </div>
           </div>
         </section>
