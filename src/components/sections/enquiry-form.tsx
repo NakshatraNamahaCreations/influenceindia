@@ -156,7 +156,7 @@ export function EnquiryForm({
             <p className={`label ${muted}`}>Or reach us directly</p>
             <a
               href={`mailto:${contact.email}`}
-              className="display d6 transition-colors hover:text-brand"
+              className="font-display text-[1.05rem] font-semibold tracking-[-0.01em] transition-colors hover:text-brand"
             >
               {contact.email}
             </a>

@@ -17,7 +17,7 @@ export function SiteFooter() {
             </div>
             <a
               href={`mailto:${contact.email}`}
-              className="label group flex items-center gap-3 text-paper/75 transition-colors hover:text-paper"
+              className="label group flex items-center gap-3 normal-case tracking-[0.02em] text-paper/75 transition-colors hover:text-paper"
             >
               {contact.email}
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
