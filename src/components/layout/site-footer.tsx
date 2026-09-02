@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Locations } from "@/components/ui/locations";
 import { Logo } from "@/components/ui/logo";
-import { contact, developer, footerColumns, legalLinks, site } from "@/content/site";
+import { contact, footerColumns, legalLinks, site } from "@/content/site";
 
 export function SiteFooter() {
   return (
@@ -100,29 +100,6 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-8">
-            <p className="label flex flex-wrap items-center gap-x-2 gap-y-1 text-paper/55">
-              <span>
-                © {new Date().getFullYear()} {site.name}
-              </span>
-              <span aria-hidden="true">·</span>
-              <span>
-                Developed by{" "}
-                {developer.url ? (
-                  <a
-                    href={developer.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-paper/75 transition-colors hover:text-paper"
-                  >
-                    {developer.name}
-                  </a>
-                ) : (
-                  <span className="text-paper/75">{developer.name}</span>
-                )}
-              </span>
-            </p>
-
             {/* back to top — an in-page anchor, so it inherits the site's
                 Lenis easing and still works with smooth scrolling off */}
             <a
@@ -148,7 +125,6 @@ export function SiteFooter() {
                 </svg>
               </span>
             </a>
-            </div>
           </div>
         </div>
       </div>
