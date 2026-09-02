@@ -205,7 +205,9 @@ export function EnquiryForm({
             </div>
 
             <fieldset className={`border-t pt-7 ${border}`}>
-              <legend className={`label mb-5 ${muted}`}>
+              <legend
+                className={`label mb-5 ${tone === "invert" ? "text-accent" : "text-brand"}`}
+              >
                 I would like to know more about
               </legend>
               <div className="flex flex-wrap gap-2">
@@ -219,18 +221,28 @@ export function EnquiryForm({
                       aria-pressed={active}
                       className={`group inline-flex items-center gap-2 rounded-[var(--radius-pill)] border px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                         active
-                          ? "-translate-y-0.5 border-brand bg-brand text-paper shadow-[0_8px_22px_-10px_rgba(92,122,28,0.85)]"
+                          ? "-translate-y-0.5 border-brand bg-brand text-paper shadow-[0_10px_24px_-10px_rgba(92,122,28,0.9)]"
                           : tone === "invert"
-                            ? "border-white/20 bg-white/[0.04] text-paper/85 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-                            : "border-brand/25 bg-brand-soft/60 text-brand hover:-translate-y-0.5 hover:border-brand hover:bg-brand-soft"
+                            ? "border-accent/35 bg-accent/10 text-accent hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-ink"
+                            : "border-brand/45 bg-brand-soft text-brand hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-paper"
                       }`}
                     >
+                      <span
+                        aria-hidden="true"
+                        className={`h-1.5 w-1.5 shrink-0 rounded-full transition-colors duration-300 ${
+                          active
+                            ? "bg-accent"
+                            : tone === "invert"
+                              ? "bg-accent/60 group-hover:bg-ink"
+                              : "bg-brand/50 group-hover:bg-paper"
+                        }`}
+                      />
                       <span
                         aria-hidden="true"
                         className={`grid transition-all duration-300 ${
                           active
                             ? "w-3 opacity-100"
-                            : "w-0 opacity-0 group-hover:w-3 group-hover:opacity-60"
+                            : "w-0 opacity-0"
                         }`}
                       >
                         <svg
