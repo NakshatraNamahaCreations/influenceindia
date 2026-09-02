@@ -39,26 +39,58 @@ export default function AboutPage() {
         {/* ---------- mission ---------- */}
         <section className="shell">
           <div className="shell-inner section-y">
-            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-              <div className="sticky-head lg:col-span-5">
+            {/* heading and opening statement share the top line, then a wide
+                banner, then the supporting paragraphs as columns — the heading
+                and picture stacked in one narrow rail left the other half of
+                the section empty */}
+            <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+              <div className="lg:col-span-7">
                 <Reveal>
                   <Eyebrow className="mb-7">{mission.eyebrow}</Eyebrow>
                 </Reveal>
-                <HeadingLines lines={[mission.heading]} size="d3" />
-                <Reveal delay={140}>
-                  <div className="mt-10">
-                    <Media src="/images/about-onboarding.jpg" alt="Corporate onboarding" ratio="3/2" />
+                <HeadingLines
+                  lines={[mission.heading]}
+                  size="d4"
+                  className="max-w-[18ch]"
+                />
+              </div>
+              <Reveal delay={140} className="lg:col-span-5 lg:pb-2">
+                <p className="lede">{mission.paragraphs[0]}</p>
+              </Reveal>
+            </div>
+
+            <Reveal delay={180}>
+              <div className="relative mt-14">
+                <span
+                  aria-hidden="true"
+                  className="absolute -left-3 -top-3 h-20 w-20 rounded-tl-2xl border-l-2 border-t-2 border-brand"
+                />
+                <span
+                  aria-hidden="true"
+                  className="absolute -bottom-3 -right-3 h-20 w-20 rounded-br-2xl border-b-2 border-r-2 border-brand"
+                />
+                <Media
+                  src="/images/about-mission.jpg"
+                  alt="The Influence India operating floor in Bengaluru"
+                  ratio="21/9"
+                  className="rounded-2xl"
+                />
+              </div>
+            </Reveal>
+
+            <div className="mt-14 grid gap-10 md:grid-cols-2 lg:gap-16">
+              {mission.paragraphs.slice(1).map((p, i) => (
+                <Reveal key={p.slice(0, 20)} delay={120 + i * 90}>
+                  <div className="border-t-2 border-brand pt-6">
+                    <p className="label mb-4 text-brand">
+                      {String(i + 1).padStart(2, "0")}
+                    </p>
+                    <p className="text-[0.95rem] leading-relaxed text-ink-70">
+                      {p}
+                    </p>
                   </div>
                 </Reveal>
-              </div>
-
-              <div className="flex flex-col gap-7 lg:col-span-6 lg:col-start-7 lg:pt-2">
-                {mission.paragraphs.map((p, i) => (
-                  <Reveal key={p.slice(0, 20)} delay={120 + i * 80}>
-                    <p className="lede">{p}</p>
-                  </Reveal>
-                ))}
-              </div>
+              ))}
             </div>
 
             <div className="mt-16">
