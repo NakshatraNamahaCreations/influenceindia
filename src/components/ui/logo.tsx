@@ -3,7 +3,8 @@ import Link from "next/link";
 
 /**
  * The supplied Influence India Services lockup, used exactly as provided —
- * mark, wordmark and tagline together, nothing re-set in web type.
+ * mark and wordmark together, nothing re-set in web type. The tagline is not
+ * part of this lockup; it runs in the top bar instead.
  *
  * On dark grounds we swap to the `-light` variant, where the logo's charcoal
  * elements are lifted to white and the greens are preserved; the charcoal
@@ -34,8 +35,8 @@ export function Logo({
       <Image
         src={invert ? "/brand/logo-full-light.png" : "/brand/logo-full.png"}
         alt=""
-        width={1200}
-        height={894}
+        width={1600}
+        height={1081}
         priority
         className={`${sizes[size]} w-auto transition-transform duration-500 group-hover:scale-[1.03]`}
       />
