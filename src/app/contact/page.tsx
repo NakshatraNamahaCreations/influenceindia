@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const details = [
   {
     label: "Corporate office",
-    value: contact.headOffice.lines.join(", "),
+    value: contact.headOffice.lines,
     icon: "office" as const,
   },
   {
@@ -84,7 +84,13 @@ export default function ContactPage() {
               {details.map((detail, i) => {
                 const value = (
                   <span className="font-display block break-words text-[0.95rem] font-semibold leading-snug tracking-[-0.01em]">
-                    {detail.value}
+                    {Array.isArray(detail.value)
+                      ? detail.value.map((line) => (
+                          <span key={line} className="block">
+                            {line}
+                          </span>
+                        ))
+                      : detail.value}
                   </span>
                 );
 

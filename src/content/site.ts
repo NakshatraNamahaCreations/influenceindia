@@ -19,14 +19,21 @@ export const nav = [
 export const contact = {
   headOffice: {
     label: "Corporate office",
-    lines: ["Bengaluru, Karnataka", "India"],
+    lines: [
+      "69, 1st Floor, Opposite Kuntamaramma Temple",
+      "Arehalli, AGS Layout Main Road",
+      "Banashankari 3rd Stage",
+      "Bengaluru 560061, Karnataka, India",
+    ],
+    /** one-line form for tight spots such as the mobile menu */
+    short: "Banashankari 3rd Stage, Bengaluru 560061",
   },
   locations: ["Bengaluru", "Mumbai & Pune", "Chennai", "Hyderabad", "Gujarat", "Uttar Pradesh", "Bhubaneswar"],
   email: "contact@projectinfluenceindia.com",
   careersEmail: "careers@projectinfluenceindia.com",
   hotline: "1800 000 000",
   /** Digits only, with country code and no "+" — used to build the wa.me link. */
-  whatsapp: "919000000000",
+  whatsapp: "919606329992",
   hours: "Monday – Saturday / 9:00AM – 6:00PM",
 } as const;
 
@@ -41,7 +48,6 @@ export const ticker = [
 ] as const;
 
 export const tickerNews = [
-  "Now hiring across 7 full-time roles in Bengaluru",
   "OSTP — onsite skill training programs now live",
   "Grow Together Policy: 21 footprints published",
 ] as const;

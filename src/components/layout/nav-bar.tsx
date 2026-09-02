@@ -137,7 +137,7 @@ export function NavBar() {
             <a href={`mailto:${contact.email}`} className="hover:text-paper">
               {contact.email}
             </a>
-            <span>{contact.headOffice.lines.join(", ")}</span>
+            <span>{contact.headOffice.short}</span>
           </div>
         </div>
       </div>
