@@ -204,7 +204,9 @@ export function EnquiryForm({
               ))}
             </div>
 
-            <fieldset className={`border-t pt-7 ${border}`}>
+            {/* no rule: a fieldset border draws a line out of the legend and
+                across the row */}
+            <fieldset className="pt-2">
               <legend
                 className={`label mb-5 ${tone === "invert" ? "text-accent" : "text-brand"}`}
               >
