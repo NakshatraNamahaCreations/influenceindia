@@ -50,11 +50,22 @@ export function NavBar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`nav-link rounded-[var(--radius-pill)] px-4 py-3 transition-colors duration-300 hover:text-brand ${
+                    aria-current={active ? "page" : undefined}
+                    className={`nav-link group relative rounded-[var(--radius-pill)] px-4 py-3 transition-colors duration-300 hover:text-brand ${
                       active ? "text-brand" : "text-ink"
                     }`}
                   >
                     {item.label}
+                    {/* rule draws in from the left on hover and stays put on
+                        the current page */}
+                    <span
+                      aria-hidden="true"
+                      className={`absolute inset-x-4 bottom-1.5 h-[2px] origin-left rounded-full bg-brand transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                        active
+                          ? "scale-x-100"
+                          : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    />
                   </Link>
                 );
               })}
@@ -112,13 +123,23 @@ export function NavBar() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="display d4 border-b border-line-invert py-5 transition-colors duration-300 hover:text-accent"
+              className={`display d4 group relative flex items-center gap-4 border-b border-line-invert py-5 transition-colors duration-300 hover:text-accent ${
+                pathname === item.href ? "text-accent" : ""
+              }`}
               style={{
                 transitionDelay: open ? `${120 + i * 45}ms` : "0ms",
                 transform: open ? "none" : "translateY(1rem)",
                 opacity: open ? 1 : 0,
               }}
             >
+              <span
+                aria-hidden="true"
+                className={`h-1.5 rounded-full bg-accent transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  pathname === item.href
+                    ? "w-6"
+                    : "w-0 group-hover:w-6"
+                }`}
+              />
               {item.label}
             </Link>
           ))}
