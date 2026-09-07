@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { BenefitCards } from "@/components/sections/benefit-cards";
 import { CtaBand } from "@/components/sections/cta-band";
+import { DrivingFuture } from "@/components/sections/driving-future";
 import { FaqSection } from "@/components/sections/faq-section";
 import { PageHero } from "@/components/sections/page-hero";
 import { Steps } from "@/components/sections/steps";
@@ -63,6 +64,9 @@ export default function SystemsPage() {
             </div>
           </div>
         </section>
+
+        {/* ---------- driving the future ---------- */}
+        <DrivingFuture />
 
         {/* ---------- application process ---------- */}
         <section className="invert-section">
