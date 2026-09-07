@@ -76,48 +76,48 @@ export const drivingFuture = {
   eyebrow: "Corporate staffing",
   headingLines: ["Driving the future", "of corporate staffing"],
   intro:
-    "As the working sector professionalises, Influence India Services brings sourcing, training, deployment and onsite management under one accountable team — one operating system for corporate and non-corporate staffing across India.",
+    "As the working sector professionalises, Influence India Services is emerging as a leader in workforce management — sourcing, training, deployment and onsite management under one accountable team, and one operating system for corporate and non-corporate staffing across India.",
   pillars: [
     {
       title: "Our value proposition",
-      body: "One point of contact replaces a panel of vendors. We source, train, certify and deploy the workforce, then manage it on your floor — so a staffing requirement becomes a managed service rather than a hiring problem.",
+      body: "Influence India Services turns a hiring problem into a managed staffing solution. Through a standardised, technology-led model we source, train, certify and deploy people and then manage them on your floor — one accountable team from the first interview to everyday performance, in place of a panel of vendors.",
     },
     {
       title: "Regulatory tailwinds",
-      body: "Every service provider completes thorough background verification and police verification (PVC) before deployment. Trained, verified and certified people, with compliance owned end to end under our Grow Together Policy.",
+      body: "Compliance is moving to the centre of workforce management, and staffing that cannot evidence it is being phased out. Every service provider completes thorough background verification and police verification (PVC) before deployment, and our operations run to current regulations — so our clients stay ahead of regulatory change rather than reacting to it.",
     },
     {
       title: "Unit economics",
-      body: "Up to 65% more affordable than your current cost of recruitment, with zero capital expenditure, no charge for training, enhancement or enrolment programs, and zero cost escalation across multi-year agreements.",
+      body: "Traditional in-house recruitment carries the full weight of sourcing, training and replacement. The same workforce costs up to 65% less than your current cost of recruitment, with zero capital expenditure, no charge for training, enhancement or enrolment programs, and zero cost escalation across multi-year agreements — a flat, predictable budget instead of a rising one.",
     },
     {
       title: "Corporate business impact",
-      body: "Real-time visibility through our Dedicated Operation System: attendance, rosters and performance tracked at every milestone, with fast replacement resolution so an absence never becomes an outage.",
+      body: "The gain reaches beyond lower attrition. Our Dedicated Operation System tracks attendance, rosters and performance at every milestone, so floors are planned on live data rather than guesswork, and fast replacement resolution means an absence never becomes an outage.",
     },
   ],
   offeringHeading: "Our integrated offering",
   offering: [
     {
       title: "Staffing management solutions",
-      body: "End-to-end recruitment across PAN-India locations — Bengaluru, Mumbai and Pune, Chennai, Hyderabad, Gujarat, Uttar Pradesh and Bhubaneswar — run through a single operating centre.",
+      body: "Customised recruitment management across PAN-India locations, run through one operating centre — sourcing, onboarding and roster management for corporate and non-corporate sectors alike.",
     },
     {
       title: "Cutting-edge technology",
-      body: "The Dedicated Operation System (DOS) tracks attendance, rosters and performance live, so decisions are made on current data rather than guesswork.",
+      body: "A central system for execution, planning and monitoring that gives your team live oversight of the workforce and immediate visibility of what each site needs.",
     },
     {
       title: "Technology solutions",
-      body: "A tracking and sourcing platform giving real-time availability of recruiters and recruitment, on a sustainable, scalable and secure base.",
+      body: "Real-time monitoring, predictive rostering and system integration through our tracking and sourcing platform, on a sustainable, scalable and secure base.",
     },
     {
       title: "Managed staffing solutions",
-      body: "Complete ownership of the staffing function: 100% owned management, onsite and offsite trainer teams, and 24/7 client support, 365 days a year.",
+      body: "Complete ownership of the staffing function — 100% owned management, onsite and offsite trainer teams and 24/7 client support, 365 days a year — delivered as one end-to-end managed service.",
     },
   ],
   about: {
-    title: "About Influence India Services",
-    body: "A sustainable staffing and job-providing-as-a-service company. Our Grow Together Policy commits us to twenty-one published footprints — from zero-unemployment targets to equal opportunity and scholarships for our employees' dependents — and internal exams, certification and promotion make up 75% of our management roles.",
+    title: "About Influence India Services: pioneering sustainable staffing",
+    body: "A sustainable staffing and job-providing-as-a-service company serving corporate clients across India. Our commitment is to convert educational qualification into employment — reducing the unemployment impact among educated Indian youth by placing them in education-equivalent jobs. Under the Grow Together Policy we publish twenty-one footprints we hold ourselves to, and internal exams, certification and promotion make up 75% of our management roles. We are committed to setting new benchmarks for sustainability, efficiency and innovation in staffing management.",
   },
   conclusion:
-    "Influence India Services is your partner in achieving sustainable corporate business. As we continue to innovate and expand, we invite you to join us in leading the future of corporate staffing.",
+    "Influence India Services is not just a solutions provider — we are your partner in achieving sustainable corporate business. Our integrated offering helps you reduce cost, stay compliant and contribute to a better staffing future. As we continue to innovate and expand, we invite you to join us in leading the future of corporate staffing.",
 } as const;
