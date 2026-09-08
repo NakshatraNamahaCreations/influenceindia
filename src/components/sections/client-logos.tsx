@@ -10,10 +10,11 @@ import { clientLogos } from "@/content/clients";
  * ticker uses — no JavaScript, no timers, and it stops for anyone who prefers
  * reduced motion. Hovering a row pauses it so a logo can be read.
  *
- * Each logo sits in a fixed cell and is contained, not cropped, so wordmarks
- * and square marks line up on one baseline whatever shape they arrive in, and
- * each is shown in its own colours — hovering lifts it slightly rather than
- * changing how it looks.
+ * Each logo sits on its own white card of a fixed size and is contained, not
+ * cropped, so wordmarks and square marks line up whatever shape they arrive in
+ * and every logo has the same clean ground behind it — several arrive with a
+ * white background baked in, which would otherwise show as a pale block on the
+ * section's off-white. Colours are the logo's own; hovering lifts the card.
  */
 function Row({
   logos,
@@ -37,7 +38,7 @@ function Row({
           <div
             key={`${src}-${i}`}
             aria-hidden={i >= logos.length}
-            className="group flex h-[6.5rem] w-[12rem] shrink-0 items-center justify-center px-5 sm:h-[8rem] sm:w-[15rem] sm:px-8"
+            className="group mx-1.5 flex h-[6.5rem] w-[12rem] shrink-0 items-center justify-center rounded-2xl border border-line-soft bg-paper px-5 shadow-[0_1px_2px_rgba(47,43,44,0.04)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_16px_32px_-18px_rgba(47,43,44,0.35)] sm:mx-2.5 sm:h-[8rem] sm:w-[15rem] sm:px-8"
           >
             <Image
               src={src}
@@ -45,7 +46,7 @@ function Row({
               width={320}
               height={160}
               sizes="15rem"
-              className="max-h-[4.25rem] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.06] sm:max-h-[5.5rem]"
+              className="max-h-[4rem] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.05] sm:max-h-[5rem]"
             />
           </div>
         ))}
@@ -64,12 +65,7 @@ export function ClientLogos() {
       <div className="shell">
         <div className="shell-inner py-[clamp(3rem,5vw,4.5rem)]">
           <Reveal>
-            <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
-              <Eyebrow>Trusted by</Eyebrow>
-              <p className="label text-ink-30">
-                {clientLogos.length} organisations and counting
-              </p>
-            </div>
+            <Eyebrow>Trusted by</Eyebrow>
           </Reveal>
         </div>
       </div>
