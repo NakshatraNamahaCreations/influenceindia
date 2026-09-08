@@ -70,7 +70,7 @@ export function ClientLogos() {
   const bottomRow = clientLogos.slice(half);
 
   return (
-    <section className="border-y border-line bg-surface">
+    <section className="border-t border-line bg-surface">
       <div className="shell">
         <div className="shell-inner py-[clamp(3rem,5vw,4.5rem)]">
           <Reveal>
