@@ -11,7 +11,9 @@ import { clientLogos } from "@/content/clients";
  * reduced motion. Hovering a row pauses it so a logo can be read.
  *
  * Each logo sits in a fixed cell and is contained, not cropped, so wordmarks
- * and square marks line up on one baseline whatever shape they arrive in.
+ * and square marks line up on one baseline whatever shape they arrive in, and
+ * each is shown in its own colours — hovering lifts it slightly rather than
+ * changing how it looks.
  */
 function Row({
   logos,
@@ -35,15 +37,15 @@ function Row({
           <div
             key={`${src}-${i}`}
             aria-hidden={i >= logos.length}
-            className="group flex h-[4.5rem] w-[9rem] shrink-0 items-center justify-center px-4 sm:h-[5.5rem] sm:w-[11rem] sm:px-6"
+            className="group flex h-[6.5rem] w-[12rem] shrink-0 items-center justify-center px-5 sm:h-[8rem] sm:w-[15rem] sm:px-8"
           >
             <Image
               src={src}
               alt=""
-              width={220}
-              height={110}
-              sizes="11rem"
-              className="max-h-[2.75rem] w-auto max-w-full object-contain opacity-70 grayscale transition duration-500 group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-[3.25rem]"
+              width={320}
+              height={160}
+              sizes="15rem"
+              className="max-h-[4.25rem] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.06] sm:max-h-[5.5rem]"
             />
           </div>
         ))}
