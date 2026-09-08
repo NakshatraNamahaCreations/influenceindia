@@ -42,7 +42,7 @@ function Row({
           <div
             key={`${src}-${i}`}
             aria-hidden={i >= logos.length}
-            className={`group mx-1.5 flex h-[6.5rem] w-[12rem] shrink-0 items-center justify-center rounded-2xl border px-5 shadow-[0_1px_2px_rgba(47,43,44,0.04)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_16px_32px_-18px_rgba(47,43,44,0.35)] sm:mx-2.5 sm:h-[8rem] sm:w-[15rem] sm:px-8 ${
+            className={`group mx-1.5 flex h-[5.5rem] w-[10.5rem] shrink-0 items-center justify-center rounded-2xl border px-5 shadow-[0_1px_2px_rgba(47,43,44,0.04)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_16px_32px_-18px_rgba(47,43,44,0.35)] sm:mx-2.5 sm:h-[6.75rem] sm:w-[13rem] sm:px-8 ${
               onDark
                 ? "border-ink bg-ink hover:border-accent"
                 : "border-line-soft bg-paper hover:border-brand/40"
@@ -54,7 +54,7 @@ function Row({
               width={320}
               height={160}
               sizes="15rem"
-              className="max-h-[4rem] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.05] sm:max-h-[5rem]"
+              className="max-h-[3.25rem] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.05] sm:max-h-[4.25rem]"
             />
           </div>
           );
