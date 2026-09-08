@@ -27,6 +27,12 @@ export const contact = {
     ],
     /** one-line form for tight spots such as the mobile menu */
     short: "Banashankari 3rd Stage, Bengaluru 560061",
+    /** the pin as shared from Google Maps, and the coordinates it resolves to */
+    map: {
+      lat: 12.9118023,
+      lng: 77.5396042,
+      url: "https://maps.app.goo.gl/P334PQL9pxb1TL6RA",
+    },
   },
   locations: ["Bengaluru", "Mumbai & Pune", "Chennai", "Hyderabad", "Gujarat", "Uttar Pradesh", "Bhubaneswar"],
   email: "contact@projectinfluenceindia.com",

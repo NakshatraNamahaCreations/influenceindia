@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { EnquiryForm } from "@/components/sections/enquiry-form";
 import { FaqSection } from "@/components/sections/faq-section";
+import { OfficeMap } from "@/components/sections/office-map";
 import { PageHero } from "@/components/sections/page-hero";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Locations } from "@/components/ui/locations";
@@ -152,6 +153,9 @@ export default function ContactPage() {
             </Reveal>
           </div>
         </section>
+
+        {/* ---------- office map ---------- */}
+        <OfficeMap />
 
         {/* ---------- form ---------- */}
         <section className="border-t border-line bg-surface">
