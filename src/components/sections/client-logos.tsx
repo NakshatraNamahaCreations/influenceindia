@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
-import { clientLogos } from "@/content/clients";
+import { clientLogos, darkCardLogos } from "@/content/clients";
 
 /**
  * The client logo strip: two rows travelling in opposite directions, running
@@ -34,11 +34,19 @@ function Row({
         className={`marquee-track items-center ${reverse ? "marquee-reverse" : ""}`}
         style={{ ["--marquee-duration" as string]: `${duration}s` }}
       >
-        {doubled.map((src, i) => (
+        {doubled.map((src, i) => {
+          // white-on-transparent artwork needs the dark ground it was drawn for
+          const onDark = darkCardLogos.includes(src);
+
+          return (
           <div
             key={`${src}-${i}`}
             aria-hidden={i >= logos.length}
-            className="group mx-1.5 flex h-[6.5rem] w-[12rem] shrink-0 items-center justify-center rounded-2xl border border-line-soft bg-paper px-5 shadow-[0_1px_2px_rgba(47,43,44,0.04)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_16px_32px_-18px_rgba(47,43,44,0.35)] sm:mx-2.5 sm:h-[8rem] sm:w-[15rem] sm:px-8"
+            className={`group mx-1.5 flex h-[6.5rem] w-[12rem] shrink-0 items-center justify-center rounded-2xl border px-5 shadow-[0_1px_2px_rgba(47,43,44,0.04)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_16px_32px_-18px_rgba(47,43,44,0.35)] sm:mx-2.5 sm:h-[8rem] sm:w-[15rem] sm:px-8 ${
+              onDark
+                ? "border-ink bg-ink hover:border-accent"
+                : "border-line-soft bg-paper hover:border-brand/40"
+            }`}
           >
             <Image
               src={src}
@@ -49,7 +57,8 @@ function Row({
               className="max-h-[4rem] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.05] sm:max-h-[5rem]"
             />
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

@@ -51,3 +51,17 @@ export const clientLogos = [
   "/logo/44.svg",
   "/logo/45.png",
 ] as const;
+
+/**
+ * Logos drawn in white for use on a dark ground — on the white card they are
+ * all but invisible, so the strip gives these five a charcoal card instead.
+ * Checked by measuring the artwork: each is near-white across it with
+ * essentially no dark ink to hold an edge.
+ */
+export const darkCardLogos: readonly string[] = [
+  "/logo/16.webp",
+  "/logo/31.png",
+  "/logo/35.webp",
+  "/logo/41.svg",
+  "/logo/45.png",
+];
