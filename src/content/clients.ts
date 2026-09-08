@@ -1,0 +1,38 @@
+/**
+ * Client and partner logos, as supplied in `public/logo`. They run in the
+ * autoplaying strip on the home page; the strip splits the list into two rows
+ * travelling in opposite directions, so adding a logo here needs no layout
+ * change — drop the file in and add its path.
+ */
+export const clientLogos = [
+  "/logo/1.png",
+  "/logo/2.png",
+  "/logo/3.svg",
+  "/logo/4.png",
+  "/logo/5.svg",
+  "/logo/6.png",
+  "/logo/7.png",
+  "/logo/8.webp",
+  "/logo/9.png",
+  "/logo/10.svg",
+  "/logo/11.svg",
+  "/logo/12.svg",
+  "/logo/13.svg",
+  "/logo/14.png",
+  "/logo/15.png",
+  "/logo/16.webp",
+  "/logo/17.webp",
+  "/logo/18.webp",
+  "/logo/19.png",
+  "/logo/20.svg",
+  "/logo/21.png",
+  "/logo/22.png",
+  "/logo/23.webp",
+  "/logo/24.jpg",
+  "/logo/25.png",
+  "/logo/26.svg",
+  "/logo/27.png",
+  "/logo/28.png",
+  "/logo/29.avif",
+  "/logo/30.png",
+] as const;

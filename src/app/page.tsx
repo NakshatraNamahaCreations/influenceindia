@@ -1,4 +1,5 @@
 import { VideoBand } from "@/components/sections/video-band";
+import { ClientLogos } from "@/components/sections/client-logos";
 import { CtaBand } from "@/components/sections/cta-band";
 import { EcosystemDiagram } from "@/components/sections/ecosystem-diagram";
 import { FaqSection } from "@/components/sections/faq-section";
@@ -46,6 +47,9 @@ export default function HomePage() {
             />
           </div>
         </section>
+
+        {/* ---------- client logos ---------- */}
+        <ClientLogos />
 
         {/* ---------- services ---------- */}
         <section className="border-t border-line bg-surface">
