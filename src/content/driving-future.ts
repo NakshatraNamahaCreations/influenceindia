@@ -174,8 +174,6 @@ export const brief = {
       { value: "100+", label: "Corporate clients across India" },
       { value: "150+", label: "Corporate businesses served" },
     ],
-    image: "/images/gtp-community.jpg",
-    imageAlt: "Influence India service providers on site",
     cta: { label: "Read the Grow Together Policy", href: "/gtp" },
   },
 

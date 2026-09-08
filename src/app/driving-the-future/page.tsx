@@ -12,7 +12,6 @@ import { StatBand } from "@/components/sections/stat-band";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { HeadingLines } from "@/components/ui/heading-lines";
-import { Media } from "@/components/ui/media";
 import { Reveal } from "@/components/ui/reveal";
 import { brief } from "@/content/driving-future";
 import { closingCta } from "@/content/home";
@@ -43,11 +42,8 @@ export default function DrivingTheFuturePage() {
 
   return (
     <>
-      <PageHero
-        {...brief.hero}
-        image="/images/hero-workforce.jpg"
-        imageAlt="Influence India service providers at a corporate site"
-      />
+      {/* text-only hero: hero-workforce.jpg already fronts What we do */}
+      <PageHero {...brief.hero} />
 
       <div className="scroll-stack">
         {/* ---------- headline figures ---------- */}
@@ -344,18 +340,44 @@ export default function DrivingTheFuturePage() {
           <div className="shell">
             <div className="shell-inner section-y">
               <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+                {/* the commitment set as a lockup rather than a photograph —
+                    gtp-community.jpg already carries the GTP page, and no image
+                    on this site is used twice */}
                 <Reveal className="lg:col-span-5">
                   <div className="relative">
                     <span
                       aria-hidden="true"
                       className="absolute -bottom-4 -left-4 h-2/3 w-2/3 rounded-2xl bg-brand-soft"
                     />
-                    <Media
-                      src={brief.about.image}
-                      alt={brief.about.imageAlt}
-                      ratio="4/5"
-                      className="relative rounded-2xl"
-                    />
+                    <div
+                      className="relative flex flex-col justify-between rounded-2xl border border-line bg-surface p-8 md:p-10"
+                      style={{ aspectRatio: "4/5" }}
+                    >
+                      <p className="label text-brand">The commitment</p>
+                      <div>
+                        <p className="display text-[clamp(2.6rem,5vw,4.4rem)] leading-none text-brand">
+                          EQ<span className="text-ink-30">:</span>EC
+                        </p>
+                        <p className="mt-5 max-w-[22ch] text-[0.95rem] leading-relaxed text-ink-70">
+                          Educational Qualification converted into Employment
+                          Commitment.
+                        </p>
+                      </div>
+                      <dl className="flex gap-8">
+                        <div>
+                          <dt className="display text-[1.5rem] leading-none text-ink">
+                            100+
+                          </dt>
+                          <dd className="label mt-2 text-ink-50">Clients</dd>
+                        </div>
+                        <div>
+                          <dt className="display text-[1.5rem] leading-none text-ink">
+                            150+
+                          </dt>
+                          <dd className="label mt-2 text-ink-50">Businesses</dd>
+                        </div>
+                      </dl>
+                    </div>
                   </div>
                 </Reveal>
 

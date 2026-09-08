@@ -15,11 +15,9 @@ export const metadata: Metadata = {
 export default function ChargingForwardPage() {
   return (
     <>
-      <PageHero
-        {...article.hero}
-        image="/images/res-1.jpg"
-        imageAlt="Skill training session at an Influence India onsite training program"
-      />
+      {/* text-only hero: res-1.jpg already fronts this article's card on
+          Resources, and no photograph is used twice across the site */}
+      <PageHero {...article.hero} />
 
       <div className="scroll-stack">
         <ChargingForwardBody />
