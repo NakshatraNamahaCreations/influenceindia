@@ -25,8 +25,23 @@ export function Reveal({
     const el = ref.current;
     if (!el) return;
 
+    // React regenerates the tree after a hydration mismatch (a browser
+    // extension rewriting the DOM is the usual cause), which can leave an
+    // observer callback in flight against a fiber that is no longer mounted —
+    // the guard keeps that from becoming a state update on a dead component.
+    let live = true;
+
+    // no IntersectionObserver (very old browser, some embedded webviews):
+    // reveal through the DOM rather than state, so the content is never left
+    // faded out for good and no cascading render is triggered
+    if (typeof IntersectionObserver === "undefined") {
+      el.classList.add("is-visible");
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!live) return;
         if (entry.isIntersecting) {
           setVisible(true);
           observer.disconnect();
@@ -36,7 +51,10 @@ export function Reveal({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      live = false;
+      observer.disconnect();
+    };
   }, []);
 
   return (

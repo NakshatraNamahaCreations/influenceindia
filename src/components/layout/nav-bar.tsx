@@ -13,6 +13,14 @@ export function NavBar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // a tap on a link already closes the menu; resetting on a route change also
+  // covers the back button and anything else that navigates while it is open
+  const [lastPath, setLastPath] = useState(pathname);
+  if (pathname !== lastPath) {
+    setLastPath(pathname);
+    setOpen(false);
+  }
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
@@ -27,6 +35,16 @@ export function NavBar() {
     };
   }, [open]);
 
+  // Escape closes the menu, so the overlay is never a trap on a phone
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
     <>
       <header
@@ -37,7 +55,7 @@ export function NavBar() {
         }`}
       >
         <div className="shell">
-          <div className="shell-inner flex h-[6rem] items-center justify-between gap-8 md:h-[7.5rem]">
+          <div className="shell-inner flex h-[4.5rem] items-center justify-between gap-4 sm:h-[6rem] sm:gap-8 md:h-[7.5rem]">
             <Logo />
 
             <nav
@@ -85,7 +103,7 @@ export function NavBar() {
                 onClick={() => setOpen((v) => !v)}
                 aria-expanded={open}
                 aria-label={open ? "Close menu" : "Open menu"}
-                className="nav-link flex h-11 items-center gap-2.5 rounded-[var(--radius-pill)] border border-line px-4 lg:hidden"
+                className="nav-link flex h-11 items-center gap-2.5 rounded-[var(--radius-pill)] border border-line px-3.5 sm:px-4 lg:hidden"
               >
                 {open ? "Close" : "Menu"}
                 <span className="flex flex-col gap-[3px]" aria-hidden="true">
@@ -111,7 +129,7 @@ export function NavBar() {
 
       {/* mobile overlay */}
       <div
-        className={`invert-section fixed inset-0 z-30 flex flex-col justify-between pt-[11rem] pb-10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
+        className={`invert-section fixed inset-0 z-30 flex flex-col justify-between gap-10 overflow-y-auto overscroll-contain pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-[6.75rem] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:pt-[8.5rem] md:pt-[10rem] lg:hidden ${
           open
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -123,7 +141,7 @@ export function NavBar() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className={`display d4 group relative flex items-center gap-4 border-b border-line-invert py-5 transition-colors duration-300 hover:text-accent ${
+              className={`display group relative flex items-center gap-3.5 border-b border-line-invert py-4 text-[clamp(1.35rem,6.5vw,2.4rem)] transition-colors duration-300 hover:text-accent sm:gap-4 sm:py-5 ${
                 pathname === item.href ? "text-accent" : ""
               }`}
               style={{

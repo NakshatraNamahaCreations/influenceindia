@@ -21,9 +21,15 @@ export function Counter({
     const el = ref.current;
     if (!el) return;
 
+    // see the note in Reveal: guards the rAF loop and the observer callback
+    // against a tree React has thrown away
+    let live = true;
+
+    if (typeof IntersectionObserver === "undefined") return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting || started.current) return;
+        if (!live || !entry.isIntersecting || started.current) return;
         started.current = true;
 
         // respect reduced motion by snapping straight to the final value
@@ -36,6 +42,7 @@ export function Counter({
         setDisplay(0);
         const start = performance.now();
         const tick = (now: number) => {
+          if (!live) return;
           const progress = Math.min((now - start) / duration, 1);
           // easeOutExpo
           const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
@@ -49,7 +56,10 @@ export function Counter({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      live = false;
+      observer.disconnect();
+    };
   }, [value, duration]);
 
   return (

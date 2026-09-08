@@ -10,10 +10,11 @@ import Link from "next/link";
  * elements are lifted to white and the greens are preserved; the charcoal
  * would otherwise disappear against the footer.
  */
-/* `md` is sized to sit just inside the header's 6rem / 7.5rem bar — the mark
-   fills the bar without changing its height. */
+/* `md` is sized to sit just inside the header bar at each step of its own
+   scale — 4.5rem on phones, 6rem from `sm`, 7.5rem from `md` — so the mark
+   fills the bar without ever changing its height. */
 const sizes = {
-  md: "h-16 md:h-[5.5rem]",
+  md: "h-11 sm:h-16 md:h-[5.5rem]",
   lg: "h-24 md:h-32",
 } as const;
 
