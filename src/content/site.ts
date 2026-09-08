@@ -61,6 +61,8 @@ export const footerColumns = [
       { label: "What we do", href: "/what-we-do" },
       { label: "Grow Together Policy", href: "/gtp" },
       { label: "Job eco-system", href: "/systems" },
+      { label: "Driving the future", href: "/driving-the-future" },
+      { label: "Charging forward", href: "/charging-forward" },
       { label: "Careers", href: "/careers" },
       { label: "Resources", href: "/resources" },
       { label: "Contact us", href: "/contact" },
@@ -102,7 +104,9 @@ export const developer = {
 
 export const legalLinks = [
   { label: "Code of conduct", href: "/gtp" },
-  { label: "Privacy policy", href: "/contact" },
-  { label: "Terms & conditions", href: "/contact" },
+  { label: "Privacy policy", href: "/privacy-policy" },
+  { label: "Terms & conditions", href: "/terms" },
+  { label: "Refund policy", href: "/refund-policy" },
+  { label: "Whistleblowing policy", href: "/whistleblowing-policy" },
   { label: "Grow Together Policy", href: "/gtp" },
 ] as const;

@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
+import { ChargingForwardBody } from "@/components/sections/charging-forward-body";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/sections/page-hero";
-import { ArrowIcon } from "@/components/ui/button";
+import { ArrowIcon, Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { HeadingLines } from "@/components/ui/heading-lines";
 import { Media } from "@/components/ui/media";
 import { Reveal } from "@/components/ui/reveal";
+import { article } from "@/content/charging-forward";
 import { articles, resourcesHero, resourcesIntro } from "@/content/resources";
 import { closingCta } from "@/content/home";
 
@@ -15,6 +18,27 @@ export const metadata: Metadata = {
   description:
     "Keep up with the trustable future of staffing and recruitment. Insights on the sustainable staffing industry, career growth and infrastructure.",
 };
+
+/**
+ * A card is a link once its article has a page of its own; the ones still to be
+ * written stay as plain previews rather than dead links.
+ */
+function ArticleShell({
+  href,
+  children,
+}: {
+  href?: string;
+  children: React.ReactNode;
+}) {
+  const className = "flex h-full flex-col";
+  return href ? (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
+  ) : (
+    <article className={className}>{children}</article>
+  );
+}
 
 export default function ResourcesPage() {
   return (
@@ -48,41 +72,47 @@ export default function ResourcesPage() {
             </div>
 
             <div className="mt-14 grid gap-px border-t border-line bg-line lg:grid-cols-3">
-              {articles.map((article, i) => (
+              {articles.map((post, i) => (
                 <Reveal
-                  key={article.title}
+                  key={post.title}
                   delay={i * 100}
                   className="group bg-paper"
                 >
-                  <article className="flex h-full flex-col">
+                  <ArticleShell href={post.href}>
                     <Media
-                      src={article.image}
-                      alt={article.title}
-                      label={article.category}
+                      src={post.image}
+                      alt={post.title}
+                      label={post.category}
                       ratio="16/10"
                       tone={i === 1 ? "brand" : "light"}
                     />
                     <div className="flex flex-1 flex-col gap-4 p-8">
                       <div className="flex items-center gap-3">
                         <span className="label text-brand">
-                          {article.category}
+                          {post.category}
                         </span>
                         <span className="label text-ink-30">
-                          {article.readTime}
+                          {post.readTime}
                         </span>
                       </div>
                       <h3 className="display d5 transition-colors duration-500 group-hover:text-brand">
-                        {article.title}
+                        {post.title}
                       </h3>
                       <p className="text-[0.95rem] leading-relaxed text-ink-70">
-                        {article.excerpt}
+                        {post.excerpt}
                       </p>
-                      <span className="label mt-auto flex items-center gap-3 pt-6 text-ink-50">
-                        Read article
-                        <ArrowIcon />
+                      <span
+                        className={`label mt-auto flex items-center gap-3 pt-6 ${
+                          post.href
+                            ? "text-brand"
+                            : "text-ink-30"
+                        }`}
+                      >
+                        {post.href ? "Read article" : "Coming soon"}
+                        {post.href ? <ArrowIcon /> : null}
                       </span>
                     </div>
-                  </article>
+                  </ArticleShell>
                 </Reveal>
               ))}
             </div>
@@ -94,6 +124,34 @@ export default function ResourcesPage() {
             </Reveal>
           </div>
         </section>
+
+        {/* ---------- featured article, in full ---------- */}
+        <section className="border-t border-line bg-surface">
+          <div className="shell">
+            <div className="shell-inner pt-[clamp(3.5rem,6vw,6rem)]">
+              <Reveal>
+                <Eyebrow className="mb-7">Featured article</Eyebrow>
+              </Reveal>
+              <HeadingLines
+                lines={["Charging forward:", "pioneering seamless", "staffing in India"]}
+                mutedCount={2}
+                size="d3"
+              />
+              <Reveal delay={140}>
+                <p className="lede mt-7 max-w-3xl">{article.hero.body}</p>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="mt-8">
+                  <Button href="/charging-forward" variant="ghost">
+                    Open as its own page
+                  </Button>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        <ChargingForwardBody />
 
         <CtaBand {...closingCta} />
       </div>

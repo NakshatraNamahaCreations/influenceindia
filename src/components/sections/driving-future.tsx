@@ -108,10 +108,17 @@ export function DrivingFuture() {
                 <p className="font-display text-[clamp(1.05rem,1.4vw,1.5rem)] font-medium leading-[1.45] tracking-[-0.01em]">
                   {drivingFuture.conclusion}
                 </p>
-                <div className="mt-8">
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Button
+                    href="/driving-the-future"
+                    variant="invert"
+                    className="w-fit"
+                  >
+                    Read the full brief
+                  </Button>
                   <Button
                     href={`mailto:${contact.email}`}
-                    variant="invert"
+                    variant="invert-ghost"
                     className="w-fit"
                   >
                     Write to us

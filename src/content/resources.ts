@@ -9,22 +9,25 @@ export const resourcesHero = {
 export const resourcesIntro =
   "Our resources page is designed to be a hub of inspiration and information, empowering you to make sustainable choices that have a lasting impact on unemployment and your career solutions. Read our informative blogs for powerful insights.";
 
+/** `href` turns a card into a link; without one the card is a preview only. */
 export const articles = [
   {
-    category: "Industry",
-    title: "The sustainable staffing industry",
+    category: "Infrastructure",
+    title: "Charging forward: seamless staffing in India",
     excerpt:
-      "How a job-providing-as-a-service model reduces cost escalation for entities while raising the floor for skilled workers across India.",
-    readTime: "6 min read",
+      "Twenty OSTP locations, built hand-in-hand with governments, education institutions and private educational entities — plus the corporate case for staffing as a service.",
+    readTime: "8 min read",
     image: "/images/res-1.jpg",
+    href: "/charging-forward",
   },
   {
-    category: "Careers",
-    title: "Career growth with us",
+    category: "Corporate staffing",
+    title: "Driving the future: (MH) solutions",
     excerpt:
-      "Internal exams, certification and promoted profiles make up 75% of our management roles. Here is what that path actually looks like.",
-    readTime: "5 min read",
+      "Our value proposition, the regulatory tailwinds behind mass hiring, the unit economics of MH against traditional IHP staffing, and our integrated offering.",
+    readTime: "7 min read",
     image: "/images/res-2.jpg",
+    href: "/driving-the-future",
   },
   {
     category: "Systems",
