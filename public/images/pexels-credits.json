@@ -126,12 +126,6 @@
       "pexelsId": "18067562",
       "query": "young indian women working jaipur",
       "page": "https://www.pexels.com/photo/18067562/"
-    },
-    {
-      "slot": "gtp-hero-v4",
-      "pexelsId": "7581119",
-      "query": "indian colleagues sharing documents together",
-      "page": "https://www.pexels.com/photo/7581119/"
     }
   ],
   "supplied": [
@@ -174,6 +168,11 @@
       "slot": "service index artwork (v-bumped)",
       "source": "supplied by client",
       "note": "Each service image re-cropped square for the 1:1 frame, keeping the same horizontal focus as before"
+    },
+    {
+      "slot": "gtp-hero-v5",
+      "source": "supplied by client",
+      "note": "Grow Together Policy hero; arrived at 4:3, the frame's own ratio, so used uncropped"
     }
   ]
 }

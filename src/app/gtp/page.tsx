@@ -28,7 +28,7 @@ export default function GtpPage() {
     <>
       <PageHero
         {...gtpHero}
-        image="/images/gtp-hero-v4.jpg"
+        image="/images/gtp-hero-v5.png"
         imageAlt="Influence India colleagues in discussion at the office"
       />
 
