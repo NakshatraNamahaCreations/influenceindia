@@ -14,11 +14,14 @@ export function HeroHeading({
   start = 120,
   /** ms between one word and the next */
   step = 65,
+  sweepLines = 0,
 }: {
   lines: readonly string[];
   className?: string;
   start?: number;
   step?: number;
+  /** render the first N lines in the drifting lime-through-white blend */
+  sweepLines?: number;
 }) {
   /* each line's delay offset is the number of words before it */
   const rows = lines.map((line, li) => ({
@@ -31,19 +34,29 @@ export function HeroHeading({
 
   return (
     <h1 className={`display d1 ${className}`}>
-      {rows.map(({ line, words, offset }) => (
+      {rows.map(({ line, words, offset }, li) => (
         <span key={line} className="hero-line">
-          {words.map((word, i) => (
-            <span
-              key={`${word}-${i}`}
-              className="hero-word"
-              style={{
-                ["--hero-delay" as string]: `${start + (offset + i) * step}ms`,
-              }}
-            >
-              {i === words.length - 1 ? word : `${word} `}
-            </span>
-          ))}
+          {words.map((word, i) => {
+            const text = i === words.length - 1 ? word : `${word} `;
+            return (
+              /* the mask animation lives on the outer span and the blend on an
+                 inner one: both are `animation`, and one element cannot carry
+                 the two */
+              <span
+                key={`${word}-${i}`}
+                className="hero-word"
+                style={{
+                  ["--hero-delay" as string]: `${start + (offset + i) * step}ms`,
+                }}
+              >
+                {li < sweepLines ? (
+                  <span className="text-brand-sweep-invert">{text}</span>
+                ) : (
+                  text
+                )}
+              </span>
+            );
+          })}
         </span>
       ))}
     </h1>

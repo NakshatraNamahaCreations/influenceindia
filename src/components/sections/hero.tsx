@@ -71,7 +71,11 @@ export function Hero({
             <Eyebrow tone="invert">{eyebrow}</Eyebrow>
           </div>
 
-          <HeroHeading lines={headingLines} className="max-w-[18ch]" />
+          <HeroHeading
+            lines={headingLines}
+            sweepLines={1}
+            className="max-w-[18ch]"
+          />
 
           {/* the rule draws itself once the last word has landed, and the copy
               and buttons come in behind it */}
