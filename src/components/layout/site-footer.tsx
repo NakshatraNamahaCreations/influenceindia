@@ -58,6 +58,28 @@ export function SiteFooter() {
                     </span>
                   ))}
                 </address>
+                {/* the address is where most people look for the office, so
+                    the route out to maps sits with it rather than only on the
+                    contact page */}
+                <a
+                  href={contact.headOffice.map.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="label group mt-1 inline-flex w-fit items-center gap-2.5 rounded-[var(--radius-pill)] border border-accent/45 bg-accent/10 px-4 py-2.5 text-[0.65rem] text-accent transition-colors duration-300 hover:bg-accent hover:text-ink"
+                >
+                  <svg
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                    className="h-3.5 w-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <path d="M8 14.5s5-4.35 5-8a5 5 0 1 0-10 0c0 3.65 5 8 5 8Z" />
+                    <circle cx="8" cy="6.5" r="1.9" />
+                  </svg>
+                  Get directions
+                </a>
               </div>
 
               <div className="flex flex-col gap-3">
