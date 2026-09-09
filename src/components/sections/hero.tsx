@@ -77,14 +77,8 @@ export function Hero({
             className="max-w-[18ch]"
           />
 
-          {/* the rule draws itself once the last word has landed, and the copy
-              and buttons come in behind it */}
-          <div className="relative mt-12 grid gap-9 pt-9 lg:grid-cols-12 lg:items-end">
-            <span
-              aria-hidden="true"
-              className="hero-rule absolute left-0 right-0 -mt-9 h-px bg-line-invert"
-              style={{ ["--hero-delay" as string]: `${settle}ms` }}
-            />
+          {/* the copy and buttons come in once the last word has landed */}
+          <div className="mt-12 grid gap-9 lg:grid-cols-12 lg:items-end">
             <div
               className="hero-in lg:col-span-6"
               style={{ ["--hero-delay" as string]: `${settle + 120}ms` }}
