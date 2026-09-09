@@ -37,7 +37,10 @@ export const contact = {
   locations: ["Bengaluru", "Mumbai & Pune", "Chennai", "Hyderabad", "Gujarat", "Uttar Pradesh", "Bhubaneswar"],
   email: "contact@projectinfluenceindia.com",
   careersEmail: "careers@projectinfluenceindia.com",
-  hotline: "1800 000 000",
+  /** display form of the number people should call; `hotlineHref` is the
+      dialable form, so a tap on a phone opens the dialler */
+  hotline: "+91 96063 29992",
+  hotlineHref: "tel:+919606329992",
   /** Digits only, with country code and no "+" — used to build the wa.me link. */
   whatsapp: "919606329992",
   hours: "Monday – Saturday / 10:00AM – 6:00PM",

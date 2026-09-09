@@ -4,7 +4,7 @@ import { HeadingLines } from "@/components/ui/heading-lines";
 import { Reveal } from "@/components/ui/reveal";
 import { contact } from "@/content/site";
 
-const { headOffice, hours, hotline, email } = contact;
+const { headOffice, hours, hotline, hotlineHref, email } = contact;
 const { lat, lng, url } = headOffice.map;
 
 /**
@@ -49,8 +49,13 @@ export function OfficeMap() {
                   </div>
                   <div>
                     <dt className="label text-ink-50">Call</dt>
-                    <dd className="mt-1.5 text-[0.9rem] text-ink-70">
-                      {hotline}
+                    <dd className="mt-1.5 text-[0.9rem]">
+                      <a
+                        href={hotlineHref}
+                        className="text-brand underline underline-offset-4"
+                      >
+                        {hotline}
+                      </a>
                     </dd>
                   </div>
                   <div>
