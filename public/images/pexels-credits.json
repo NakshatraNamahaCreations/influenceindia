@@ -92,12 +92,6 @@
       "page": "https://www.pexels.com/photo/7581126/"
     },
     {
-      "slot": "card-dos-v2",
-      "pexelsId": "7580755",
-      "query": "indian office team reviewing records",
-      "page": "https://www.pexels.com/photo/7580755/"
-    },
-    {
       "slot": "card-app-v2",
       "pexelsId": "7580752",
       "query": "indian office desk records screen",
@@ -234,6 +228,13 @@
       "pexelsId": "7580751",
       "query": "indian office team discussion",
       "page": "https://www.pexels.com/photo/7580751/"
+    }
+  ],
+  "supplied": [
+    {
+      "slot": "card-dos-v3",
+      "source": "supplied by client",
+      "note": "Dedicated Operation System dashboard illustration; not a Pexels asset"
     }
   ]
 }

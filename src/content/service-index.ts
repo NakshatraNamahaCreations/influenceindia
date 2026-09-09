@@ -181,8 +181,8 @@ export const platformCards = [
   {
     name: "Dedicated Operation System",
     body: "Attendance, rosters, performance and replacement requests are managed through our central DOS, giving clients full documentation control and live visibility across every deployed site.",
-    image: "/images/card-dos-v2.jpg",
-    imageLabel: "DOS control room",
+    image: "/images/card-dos-v3.png",
+    imageLabel: "DOS dashboard",
   },
   {
     name: "Influence Tracking App",
