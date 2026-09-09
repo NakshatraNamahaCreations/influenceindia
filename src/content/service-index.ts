@@ -52,7 +52,7 @@ export const serviceGroups: ServiceGroup[] = [
           "A seamless opportunity experience, anytime and from anywhere, backed by extensive infrastructure to manage staffing, recruiting and training across the country's major corridors.",
           "Strategic collaboration ensures competitive quality staffing, with 24/7, 365-day helplines and centralised locations delivering an uninterrupted flow of skilled manpower.",
         ],
-        image: "/images/svc-pan-india.jpg",
+        image: "/images/svc-pan-india-v2.png",
         imageLabel: "PAN-India sourcing network",
       },
       {

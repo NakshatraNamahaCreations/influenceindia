@@ -44,12 +44,6 @@
       "page": "https://www.pexels.com/photo/7581121/"
     },
     {
-      "slot": "svc-pan-india",
-      "pexelsId": "36171603",
-      "query": "india city",
-      "page": "https://www.pexels.com/photo/36171603/"
-    },
-    {
       "slot": "svc-skill-adoption",
       "pexelsId": "33755641",
       "query": "india repair training course",
@@ -223,6 +217,11 @@
       "slot": "hero-workforce-v2",
       "source": "supplied by client",
       "note": "What we do hero video; H.264 CRF 23 with audio dropped (plays muted), poster is its first frame"
+    },
+    {
+      "slot": "svc-pan-india-v2",
+      "source": "supplied by client",
+      "note": "PAN-India sourcing artwork; cropped centre to the 3:4 slot the service index renders"
     }
   ]
 }
