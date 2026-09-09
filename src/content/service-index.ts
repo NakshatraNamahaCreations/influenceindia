@@ -135,7 +135,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Every service provider passes thorough background verification and police verification (PVC) before deployment, ensuring the safety and reliability of the people on your site.",
           "Robust security systems and compliance measures are implemented across the work sector, with experts ensuring zero compliance gaps with clients.",
         ],
-        image: "/images/cap-2.jpg",
+        image: "/images/cap-2-v2.png",
         imageLabel: "Verification and documentation",
       },
       {

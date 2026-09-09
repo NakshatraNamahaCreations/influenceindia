@@ -38,12 +38,6 @@
       "page": "https://www.pexels.com/photo/7964513/"
     },
     {
-      "slot": "cap-2",
-      "pexelsId": "7581114",
-      "query": "indian office team",
-      "page": "https://www.pexels.com/photo/7581114/"
-    },
-    {
       "slot": "careers-life",
       "pexelsId": "7581126",
       "query": "indian office team",
@@ -217,6 +211,11 @@
       "slot": "pillars-training-v2",
       "source": "supplied by client",
       "note": "Onsite skill training artwork; cropped right of centre to hold the learn/practice/grow board in the 4:5 frame"
+    },
+    {
+      "slot": "cap-2-v2",
+      "source": "supplied by client",
+      "note": "Verification & compliance artwork; cropped right of centre to hold the six checks in the 4:5 frame"
     }
   ]
 }
