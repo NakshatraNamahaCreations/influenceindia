@@ -29,9 +29,9 @@ export const contact = {
     short: "Banashankari 3rd Stage, Bengaluru 560061",
     /** the pin as shared from Google Maps, and the coordinates it resolves to */
     map: {
-      lat: 12.9118023,
-      lng: 77.5396042,
-      url: "https://maps.app.goo.gl/P334PQL9pxb1TL6RA",
+      lat: 12.9118022,
+      lng: 77.5396076,
+      url: "https://maps.app.goo.gl/59DF5ZPQAmFE4MJY9",
     },
   },
   locations: ["Bengaluru", "Mumbai & Pune", "Chennai", "Hyderabad", "Gujarat", "Uttar Pradesh", "Bhubaneswar"],
