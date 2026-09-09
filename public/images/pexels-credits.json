@@ -128,10 +128,10 @@
       "page": "https://www.pexels.com/photo/18067562/"
     },
     {
-      "slot": "gtp-hero",
-      "pexelsId": "7580751",
-      "query": "indian office team discussion",
-      "page": "https://www.pexels.com/photo/7580751/"
+      "slot": "gtp-hero-v4",
+      "pexelsId": "7581119",
+      "query": "indian colleagues sharing documents together",
+      "page": "https://www.pexels.com/photo/7581119/"
     }
   ],
   "supplied": [
