@@ -108,7 +108,7 @@ export function ServiceIndex({
           </nav>
 
           {/* ---- sticky image + dashed rail ---- */}
-          <div className="hidden lg:sticky lg:top-36 lg:col-span-3 lg:block lg:self-start">
+          <div className="hidden lg:sticky lg:top-36 lg:col-span-4 lg:block lg:self-start">
             <div className="relative">
               <span
                 className={`absolute -left-8 top-0 bottom-0 border-l border-dashed ${
@@ -128,7 +128,7 @@ export function ServiceIndex({
                       src={item.image}
                       alt={item.image ? item.name : ""}
                       label={item.imageLabel}
-                      ratio="3/4"
+                      ratio="4/5"
                       tone={dark ? "dark" : "light"}
                     />
                   </div>
@@ -138,7 +138,7 @@ export function ServiceIndex({
           </div>
 
           {/* ---- scrolling detail blocks ---- */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-5">
             {flat.map((item, i) => {
               const active = item.id === activeId;
               return (
