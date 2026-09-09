@@ -2,8 +2,8 @@ export const hero = {
   eyebrow: "Influence India Services",
   headingLines: ["One system", "Every step of the career"],
   mutedCount: 0,
-  video: "/videos/home-team.mp4",
-  poster: "/images/home-poster.jpg",
+  video: "/videos/home-team-v2.mp4",
+  poster: "/images/home-poster-v2.jpg",
   body:
     "Sourcing, skill training, certification and onsite management — unified across India under one accountable team. We are emerging the opportunities to the un-sourced world.",
   ctas: [

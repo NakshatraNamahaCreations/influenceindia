@@ -220,6 +220,11 @@
       "slot": "ecosystem-centre-v3",
       "source": "supplied by client",
       "note": "Arrived pre-composed inside a green ring; the photographic disc is extracted so the diagram draws its own ring"
+    },
+    {
+      "slot": "home-team-v2 / home-poster-v2",
+      "source": "supplied by client",
+      "note": "Home hero video; re-encoded H.264 CRF 27 with the audio track dropped (it plays muted), poster is its first frame"
     }
   ]
 }
