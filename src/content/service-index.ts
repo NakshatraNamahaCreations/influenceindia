@@ -41,7 +41,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Elevate your entity's growth by embracing a sustainable recruiting solution built on premium, well-mannered and knowledgeable people, supported by trainers who keep standards consistent across every deployment.",
           "A convenient and intuitive platform makes recruitment stress-free — with assistance for streamlined staffing, managing and replacement, so you can optimise budget potential while recruiting with real cost efficiency.",
         ],
-        image: "/images/svc-elevate-growth.jpg",
+        image: "/images/svc-elevate-growth-v2.png",
         imageLabel: "Client onboarding session",
       },
       {

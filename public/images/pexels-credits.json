@@ -38,12 +38,6 @@
       "page": "https://www.pexels.com/photo/7580643/"
     },
     {
-      "slot": "svc-elevate-growth",
-      "pexelsId": "7581121",
-      "query": "indian office team",
-      "page": "https://www.pexels.com/photo/7581121/"
-    },
-    {
       "slot": "platform-dos",
       "pexelsId": "7964513",
       "query": "office team working",
@@ -219,6 +213,11 @@
       "slot": "svc-skill-adoption-v3",
       "source": "supplied by client",
       "note": "Skill adoption artwork; cropped right of centre so the learn/practice/apply/grow board sits whole in the 4:5 frame"
+    },
+    {
+      "slot": "svc-elevate-growth-v2",
+      "source": "supplied by client",
+      "note": "Elevate entity growth artwork; cropped right of centre so the rising curve runs to the top of the 4:5 frame"
     }
   ]
 }
