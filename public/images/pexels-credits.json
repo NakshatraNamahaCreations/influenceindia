@@ -164,12 +164,6 @@
       "page": "https://www.pexels.com/video/drone-footage-of-delhi-4039439/"
     },
     {
-      "slot": "ecosystem-centre-v2",
-      "pexelsId": "7580750",
-      "query": "indian office floor working",
-      "page": "https://www.pexels.com/photo/7580750/"
-    },
-    {
       "slot": "contact-hero",
       "pexelsId": "7580644",
       "query": "indian office team",
@@ -221,6 +215,11 @@
       "slot": "strip-workforce-v2 / strip-training-v2 / strip-clients-v2",
       "source": "supplied by client",
       "note": "One triptych, split into three panels and cropped to the strip's 3:4 slots"
+    },
+    {
+      "slot": "ecosystem-centre-v3",
+      "source": "supplied by client",
+      "note": "Arrived pre-composed inside a green ring; the photographic disc is extracted so the diagram draws its own ring"
     }
   ]
 }
