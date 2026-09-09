@@ -74,7 +74,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Sustainable staffing for end-to-end recruitment needs, provided across PAN-India locations through our proprietary staffing management solution and experienced trainers.",
           "A centralised network and team operating centre ensures recruitment efficiency and transparency, with experts optimising skilling and educating while ensuring zero compliance gaps with clients.",
         ],
-        image: "/images/svc-managed-services-v2.jpg",
+        image: "/images/svc-managed-services-v3.png",
         imageLabel: "Central operating centre",
       },
       {

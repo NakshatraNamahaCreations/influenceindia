@@ -50,12 +50,6 @@
       "page": "https://www.pexels.com/photo/33755641/"
     },
     {
-      "slot": "svc-managed-services",
-      "pexelsId": "7580820",
-      "query": "indian office operations",
-      "page": "https://www.pexels.com/photo/7580820/"
-    },
-    {
       "slot": "platform-dos",
       "pexelsId": "7964513",
       "query": "office team working",
@@ -221,6 +215,11 @@
       "slot": "svc-staffing-services-v2",
       "source": "supplied by client",
       "note": "Staffing services artwork; cropped centre to the 4:5 service frame"
+    },
+    {
+      "slot": "svc-managed-services-v3",
+      "source": "supplied by client",
+      "note": "Managed services artwork; cropped left of centre to keep the site and workforce counters in the 4:5 frame"
     }
   ]
 }
