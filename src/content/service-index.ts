@@ -41,7 +41,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Elevate your entity's growth by embracing a sustainable recruiting solution built on premium, well-mannered and knowledgeable people, supported by trainers who keep standards consistent across every deployment.",
           "A convenient and intuitive platform makes recruitment stress-free — with assistance for streamlined staffing, managing and replacement, so you can optimise budget potential while recruiting with real cost efficiency.",
         ],
-        image: "/images/svc-elevate-growth-v2.png",
+        image: "/images/svc-elevate-growth-v3.png",
         imageLabel: "Client onboarding session",
       },
       {
@@ -52,7 +52,7 @@ export const serviceGroups: ServiceGroup[] = [
           "A seamless opportunity experience, anytime and from anywhere, backed by extensive infrastructure to manage staffing, recruiting and training across the country's major corridors.",
           "Strategic collaboration ensures competitive quality staffing, with 24/7, 365-day helplines and centralised locations delivering an uninterrupted flow of skilled manpower.",
         ],
-        image: "/images/svc-pan-india-v2.png",
+        image: "/images/svc-pan-india-v3.png",
         imageLabel: "PAN-India sourcing network",
       },
       {
@@ -63,7 +63,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Sustainable, efficient and replacement staffing for your entity, delivered through a tech-driven system that produces significant savings against conventional recruitment.",
           "We integrate seamlessly into existing operations and working patterns, with customised strategies built for your particular workspace and ecosystem — so an absence never becomes an outage.",
         ],
-        image: "/images/svc-staffing-services-v2.png",
+        image: "/images/svc-staffing-services-v3.png",
         imageLabel: "Replacement cover in action",
       },
       {
@@ -74,7 +74,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Sustainable staffing for end-to-end recruitment needs, provided across PAN-India locations through our proprietary staffing management solution and experienced trainers.",
           "A centralised network and team operating centre ensures recruitment efficiency and transparency, with experts optimising skilling and educating while ensuring zero compliance gaps with clients.",
         ],
-        image: "/images/svc-managed-services-v3.png",
+        image: "/images/svc-managed-services-v4.png",
         imageLabel: "Central operating centre",
       },
       {
@@ -85,7 +85,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Accelerate your work efficiency and quality while future-proofing your recognition — empowering your organisation to adopt skill and drive positive change across the working sector.",
           "Tailored end-to-end staffing management for corporate and hospitality industries, with suitable staff deployed to a work structure built to fit, and expert training supporting every individual entity.",
         ],
-        image: "/images/svc-skill-adoption-v3.png",
+        image: "/images/svc-skill-adoption-v4.png",
         imageLabel: "Skill training programme",
       },
     ],
@@ -102,7 +102,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Our Onsite Skill Training Programs (OSTP) put trainers where the work actually happens, upgrading capability without pulling people away from your operation.",
           "Periodic training and skill-upgrading programs keep the deployed workforce current, with zero investment required from your entity for training, enhancement or enrolment.",
         ],
-        image: "/images/pillars-training-v2.png",
+        image: "/images/pillars-training-v3.png",
         imageLabel: "Onsite training programme",
       },
       {
@@ -135,7 +135,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Every service provider passes thorough background verification and police verification (PVC) before deployment, ensuring the safety and reliability of the people on your site.",
           "Robust security systems and compliance measures are implemented across the work sector, with experts ensuring zero compliance gaps with clients.",
         ],
-        image: "/images/cap-2-v2.png",
+        image: "/images/cap-2-v3.png",
         imageLabel: "Verification and documentation",
       },
       {
@@ -146,7 +146,7 @@ export const serviceGroups: ServiceGroup[] = [
           "A 24/7 helpline and client support desk backed by serviceable onsite management — whether it is a routine roster update or an urgent replacement.",
           "Trust, reliability, affordability and quality-assured support, future-proofed against unemployment crises and staffing shocks alike.",
         ],
-        image: "/images/cap-3-v2.png",
+        image: "/images/cap-3-v3.png",
         imageLabel: "Client support desk",
       },
       {
@@ -157,7 +157,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Proprietary tools and algorithms facilitate optimisation based on a real understanding of corporate staffing demand, vacancy patterns and conversion rates.",
           "Transparent, data-driven recruitment gives you real-time analytics to connect with requirements, optimise vacancies and run demand-responsive services.",
         ],
-        image: "/images/promise-team.jpg",
+        image: "/images/svc-analytics-v1.png",
         imageLabel: "Analytics and reporting",
       },
     ],

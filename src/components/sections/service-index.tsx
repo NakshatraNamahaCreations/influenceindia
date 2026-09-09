@@ -128,7 +128,7 @@ export function ServiceIndex({
                       src={item.image}
                       alt={item.image ? item.name : ""}
                       label={item.imageLabel}
-                      ratio="4/5"
+                      ratio="1/1"
                       tone={dark ? "dark" : "light"}
                     />
                   </div>

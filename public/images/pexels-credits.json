@@ -2,12 +2,6 @@
   "license": "Pexels License — free for commercial use, no attribution required",
   "assets": [
     {
-      "slot": "promise-team",
-      "pexelsId": "7581110",
-      "query": "indian office team",
-      "page": "https://www.pexels.com/photo/7581110/"
-    },
-    {
       "slot": "about-mission",
       "pexelsId": "7580648",
       "query": "indian office floor",
@@ -177,44 +171,9 @@
       "note": "What we do hero video; H.264 CRF 23 with audio dropped (plays muted), poster is its first frame"
     },
     {
-      "slot": "svc-pan-india-v2",
+      "slot": "service index artwork (v-bumped)",
       "source": "supplied by client",
-      "note": "PAN-India sourcing artwork; cropped centre to the 3:4 slot the service index renders"
-    },
-    {
-      "slot": "svc-staffing-services-v2",
-      "source": "supplied by client",
-      "note": "Staffing services artwork; cropped centre to the 4:5 service frame"
-    },
-    {
-      "slot": "svc-managed-services-v3",
-      "source": "supplied by client",
-      "note": "Managed services artwork; cropped left of centre to keep the site and workforce counters in the 4:5 frame"
-    },
-    {
-      "slot": "svc-skill-adoption-v3",
-      "source": "supplied by client",
-      "note": "Skill adoption artwork; cropped right of centre so the learn/practice/apply/grow board sits whole in the 4:5 frame"
-    },
-    {
-      "slot": "svc-elevate-growth-v2",
-      "source": "supplied by client",
-      "note": "Elevate entity growth artwork; cropped right of centre so the rising curve runs to the top of the 4:5 frame"
-    },
-    {
-      "slot": "pillars-training-v2",
-      "source": "supplied by client",
-      "note": "Onsite skill training artwork; cropped right of centre to hold the learn/practice/grow board in the 4:5 frame"
-    },
-    {
-      "slot": "cap-2-v2",
-      "source": "supplied by client",
-      "note": "Verification & compliance artwork; cropped right of centre to hold the six checks in the 4:5 frame"
-    },
-    {
-      "slot": "cap-3-v2",
-      "source": "supplied by client",
-      "note": "24/7 client support artwork; cropped right of centre to keep the support board beside the desk in the 4:5 frame"
+      "note": "Each service image re-cropped square for the 1:1 frame, keeping the same horizontal focus as before"
     }
   ]
 }
