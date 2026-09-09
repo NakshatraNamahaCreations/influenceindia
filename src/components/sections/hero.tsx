@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { HeadingLines } from "@/components/ui/heading-lines";
-import { Reveal } from "@/components/ui/reveal";
+import {
+  HeroHeading,
+  heroWordsDuration,
+} from "@/components/ui/hero-heading";
 
 export function Hero({
   eyebrow,
   headingLines,
-  mutedCount,
   body,
   ctas,
   video,
@@ -14,7 +15,6 @@ export function Hero({
 }: {
   eyebrow: string;
   headingLines: readonly string[];
-  mutedCount?: number;
   body: string;
   /** optional background video with poster frame */
   video?: string;
@@ -25,6 +25,9 @@ export function Hero({
     variant: "primary" | "ghost";
   }[];
 }) {
+  // when the headline's last word lands — everything after it trails this
+  const settle = heroWordsDuration(headingLines) + 260;
+
   return (
     <section className="invert-section relative isolate overflow-hidden">
       {/* backdrop: background video when supplied, else grid + glow */}
@@ -64,27 +67,30 @@ export function Hero({
 
       <div className="shell">
         <div className="shell-inner flex min-h-[clamp(34rem,78vh,48rem)] flex-col justify-end pt-24 pb-14 md:pt-32 md:pb-20">
-          <Reveal>
-            <Eyebrow tone="invert" className="mb-9">
-              {eyebrow}
-            </Eyebrow>
-          </Reveal>
+          <div className="hero-in mb-9" style={{ ["--hero-delay" as string]: "0ms" }}>
+            <Eyebrow tone="invert">{eyebrow}</Eyebrow>
+          </div>
 
-          <HeadingLines
-            as="h1"
-            lines={headingLines}
-            mutedCount={mutedCount}
-            size="d1"
-            tone="invert"
-            animate={false}
-            className="max-w-[18ch]"
-          />
+          <HeroHeading lines={headingLines} className="max-w-[18ch]" />
 
-          <div className="mt-12 grid gap-9 border-t border-line-invert pt-9 lg:grid-cols-12 lg:items-end">
-            <Reveal delay={160} className="lg:col-span-6">
+          {/* the rule draws itself once the last word has landed, and the copy
+              and buttons come in behind it */}
+          <div className="relative mt-12 grid gap-9 pt-9 lg:grid-cols-12 lg:items-end">
+            <span
+              aria-hidden="true"
+              className="hero-rule absolute left-0 right-0 -mt-9 h-px bg-line-invert"
+              style={{ ["--hero-delay" as string]: `${settle}ms` }}
+            />
+            <div
+              className="hero-in lg:col-span-6"
+              style={{ ["--hero-delay" as string]: `${settle + 120}ms` }}
+            >
               <p className="lede max-w-2xl">{body}</p>
-            </Reveal>
-            <Reveal delay={240} className="lg:col-span-6 lg:justify-self-end">
+            </div>
+            <div
+              className="hero-in lg:col-span-6 lg:justify-self-end"
+              style={{ ["--hero-delay" as string]: `${settle + 220}ms` }}
+            >
               <div className="flex flex-wrap gap-3">
                 {ctas.map((cta) => (
                   <Button
@@ -98,7 +104,7 @@ export function Hero({
                   </Button>
                 ))}
               </div>
-            </Reveal>
+            </div>
           </div>
         </div>
       </div>

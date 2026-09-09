@@ -234,6 +234,51 @@
     transform: none;
   }
 
+  /* ---- hero: an orchestrated entrance on load ----
+     The hero sits above the fold, so it cannot wait on a scroll observer the
+     way the rest of the page does. Each word rises out of its own mask on a
+     stagger set per word, and the rule and copy follow it in. */
+  @keyframes hero-word-in {
+    from { transform: translateY(110%); opacity: 0; }
+    60%  { opacity: 1; }
+    to   { transform: none; opacity: 1; }
+  }
+
+  .hero-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+  }
+
+  .hero-word {
+    display: inline-block;
+    white-space: pre;
+    animation: hero-word-in 1.05s var(--ease-out-expo) both;
+    animation-delay: var(--hero-delay, 0ms);
+  }
+
+  @keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(0.9rem); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .hero-in {
+    animation: hero-fade-up 0.9s var(--ease-out-expo) both;
+    animation-delay: var(--hero-delay, 0ms);
+  }
+
+  @keyframes hero-rule-in {
+    from { transform: scaleX(0); }
+    to   { transform: none; }
+  }
+
+  .hero-rule {
+    transform-origin: left;
+    animation: hero-rule-in 1.1s var(--ease-out-expo) both;
+    animation-delay: var(--hero-delay, 0ms);
+  }
+
   /* trigger-only: fires child animations without moving itself */
   .reveal-trigger {
     opacity: 1;
@@ -339,6 +384,9 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .hero-word,
+    .hero-in,
+    .hero-rule { animation: none; opacity: 1; transform: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
     .line-mask > span { transform: none; transition: none; }
     .marquee-track { animation: none; }
