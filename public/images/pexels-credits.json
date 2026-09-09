@@ -50,12 +50,6 @@
       "page": "https://www.pexels.com/photo/33755641/"
     },
     {
-      "slot": "svc-staffing-services",
-      "pexelsId": "7581131",
-      "query": "indian office team",
-      "page": "https://www.pexels.com/photo/7581131/"
-    },
-    {
       "slot": "svc-managed-services",
       "pexelsId": "7580820",
       "query": "indian office operations",
@@ -222,6 +216,11 @@
       "slot": "svc-pan-india-v2",
       "source": "supplied by client",
       "note": "PAN-India sourcing artwork; cropped centre to the 3:4 slot the service index renders"
+    },
+    {
+      "slot": "svc-staffing-services-v2",
+      "source": "supplied by client",
+      "note": "Staffing services artwork; cropped centre to the 4:5 service frame"
     }
   ]
 }

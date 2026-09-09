@@ -63,7 +63,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Sustainable, efficient and replacement staffing for your entity, delivered through a tech-driven system that produces significant savings against conventional recruitment.",
           "We integrate seamlessly into existing operations and working patterns, with customised strategies built for your particular workspace and ecosystem — so an absence never becomes an outage.",
         ],
-        image: "/images/svc-staffing-services.jpg",
+        image: "/images/svc-staffing-services-v2.png",
         imageLabel: "Replacement cover in action",
       },
       {
