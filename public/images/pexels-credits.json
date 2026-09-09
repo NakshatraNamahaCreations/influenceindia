@@ -26,12 +26,6 @@
       "page": "https://www.pexels.com/photo/7581119/"
     },
     {
-      "slot": "pillars-training",
-      "pexelsId": "35216547",
-      "query": "india skill training",
-      "page": "https://www.pexels.com/photo/35216547/"
-    },
-    {
       "slot": "svc-right-staffing",
       "pexelsId": "7580643",
       "query": "indian business",
@@ -218,6 +212,11 @@
       "slot": "svc-elevate-growth-v2",
       "source": "supplied by client",
       "note": "Elevate entity growth artwork; cropped right of centre so the rising curve runs to the top of the 4:5 frame"
+    },
+    {
+      "slot": "pillars-training-v2",
+      "source": "supplied by client",
+      "note": "Onsite skill training artwork; cropped right of centre to hold the learn/practice/grow board in the 4:5 frame"
     }
   ]
 }

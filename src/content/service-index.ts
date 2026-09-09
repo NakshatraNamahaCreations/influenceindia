@@ -102,7 +102,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Our Onsite Skill Training Programs (OSTP) put trainers where the work actually happens, upgrading capability without pulling people away from your operation.",
           "Periodic training and skill-upgrading programs keep the deployed workforce current, with zero investment required from your entity for training, enhancement or enrolment.",
         ],
-        image: "/images/pillars-training.jpg",
+        image: "/images/pillars-training-v2.png",
         imageLabel: "Onsite training programme",
       },
       {
