@@ -44,12 +44,6 @@
       "page": "https://www.pexels.com/photo/7581121/"
     },
     {
-      "slot": "svc-skill-adoption",
-      "pexelsId": "33755641",
-      "query": "india repair training course",
-      "page": "https://www.pexels.com/photo/33755641/"
-    },
-    {
       "slot": "platform-dos",
       "pexelsId": "7964513",
       "query": "office team working",
@@ -220,6 +214,11 @@
       "slot": "svc-managed-services-v3",
       "source": "supplied by client",
       "note": "Managed services artwork; cropped left of centre to keep the site and workforce counters in the 4:5 frame"
+    },
+    {
+      "slot": "svc-skill-adoption-v3",
+      "source": "supplied by client",
+      "note": "Skill adoption artwork; cropped right of centre so the learn/practice/apply/grow board sits whole in the 4:5 frame"
     }
   ]
 }

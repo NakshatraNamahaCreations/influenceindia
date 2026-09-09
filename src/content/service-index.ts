@@ -85,7 +85,7 @@ export const serviceGroups: ServiceGroup[] = [
           "Accelerate your work efficiency and quality while future-proofing your recognition — empowering your organisation to adopt skill and drive positive change across the working sector.",
           "Tailored end-to-end staffing management for corporate and hospitality industries, with suitable staff deployed to a work structure built to fit, and expert training supporting every individual entity.",
         ],
-        image: "/images/svc-skill-adoption-v2.jpg",
+        image: "/images/svc-skill-adoption-v3.png",
         imageLabel: "Skill training programme",
       },
     ],
