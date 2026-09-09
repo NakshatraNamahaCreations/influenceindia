@@ -14,12 +14,6 @@
       "page": "https://www.pexels.com/photo/7580648/"
     },
     {
-      "slot": "hero-workforce",
-      "pexelsId": "7581229",
-      "query": "indian office team meeting",
-      "page": "https://www.pexels.com/video/7581229/"
-    },
-    {
       "slot": "cap-1",
       "pexelsId": "7580651",
       "query": "indian office document review",
@@ -90,12 +84,6 @@
       "pexelsId": "7581126",
       "query": "indian office team",
       "page": "https://www.pexels.com/photo/7581126/"
-    },
-    {
-      "slot": "hero video (what-we-do)",
-      "pexelsId": "7581229",
-      "query": "indian office team meeting",
-      "page": "https://www.pexels.com/video/7581229/"
     },
     {
       "slot": "hero video (home)",
@@ -230,6 +218,11 @@
       "slot": "training-band-v2 / training-band-poster-v2",
       "source": "supplied by client",
       "note": "Skill training band video; H.264 CRF 23 with audio dropped (plays muted), poster is its first frame"
+    },
+    {
+      "slot": "hero-workforce-v2",
+      "source": "supplied by client",
+      "note": "What we do hero video; H.264 CRF 23 with audio dropped (plays muted), poster is its first frame"
     }
   ]
 }

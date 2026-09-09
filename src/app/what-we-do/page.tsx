@@ -31,8 +31,8 @@ export default function WhatWeDoPage() {
         eyebrow="What we do"
         headingLines={["Nationwide", "workforce", "coverage"]}
         mutedCount={2}
-        src="/images/hero-workforce.jpg"
-        video="/videos/hero-workforce.mp4"
+        src="/images/hero-workforce-v2.jpg"
+        video="/videos/hero-workforce-v2.mp4"
         ticker={servicesHeroTicker}
       />
 
