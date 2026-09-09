@@ -181,13 +181,13 @@ export const platformCards = [
   {
     name: "Dedicated Operation System",
     body: "Attendance, rosters, performance and replacement requests are managed through our central DOS, giving clients full documentation control and live visibility across every deployed site.",
-    image: "/images/card-dos.jpg",
+    image: "/images/card-dos-v2.jpg",
     imageLabel: "DOS control room",
   },
   {
     name: "Influence Tracking App",
     body: "Aspirants and clients get access to live placement status, seamless enrolment, real-time training records and deployment updates — with 100% placement and sourcing facility built in.",
-    image: "/images/card-app.jpg",
+    image: "/images/card-app-v2.jpg",
     imageLabel: "Tracking app interface",
   },
 ];

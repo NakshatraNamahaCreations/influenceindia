@@ -14,7 +14,7 @@ export const ecosystem = {
     "Your workforce sits at the centre — sourced, skilled, certified, deployed and monitored by one accountable team. Every service radiates from it.",
 
   centre: {
-    src: "/images/ecosystem-centre.jpg",
+    src: "/images/ecosystem-centre-v2.jpg",
     alt: "An Influence India team together in the workplace",
   },
 

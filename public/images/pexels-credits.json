@@ -92,13 +92,13 @@
       "page": "https://www.pexels.com/photo/7581126/"
     },
     {
-      "slot": "card-dos",
+      "slot": "card-dos-v2",
       "pexelsId": "7580755",
       "query": "indian office team reviewing records",
       "page": "https://www.pexels.com/photo/7580755/"
     },
     {
-      "slot": "card-app",
+      "slot": "card-app-v2",
       "pexelsId": "7580752",
       "query": "indian office desk records screen",
       "page": "https://www.pexels.com/photo/7580752/"
@@ -194,7 +194,7 @@
       "page": "https://www.pexels.com/video/drone-footage-of-delhi-4039439/"
     },
     {
-      "slot": "ecosystem-centre",
+      "slot": "ecosystem-centre-v2",
       "pexelsId": "7580750",
       "query": "indian office floor working",
       "page": "https://www.pexels.com/photo/7580750/"
