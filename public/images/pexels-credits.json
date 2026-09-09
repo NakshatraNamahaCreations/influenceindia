@@ -92,12 +92,6 @@
       "page": "https://www.pexels.com/photo/7581126/"
     },
     {
-      "slot": "card-app-v2",
-      "pexelsId": "7580752",
-      "query": "indian office desk records screen",
-      "page": "https://www.pexels.com/photo/7580752/"
-    },
-    {
       "slot": "strip-workforce",
       "pexelsId": "7581113",
       "query": "indian corporate professionals",
@@ -235,6 +229,11 @@
       "slot": "card-dos-v3",
       "source": "supplied by client",
       "note": "Dedicated Operation System dashboard illustration; not a Pexels asset"
+    },
+    {
+      "slot": "card-app-v3",
+      "source": "supplied by client",
+      "note": "Influence Tracking App screens illustration; cropped to 16:9 for the card"
     }
   ]
 }

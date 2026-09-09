@@ -187,8 +187,8 @@ export const platformCards = [
   {
     name: "Influence Tracking App",
     body: "Aspirants and clients get access to live placement status, seamless enrolment, real-time training records and deployment updates — with 100% placement and sourcing facility built in.",
-    image: "/images/card-app-v2.jpg",
-    imageLabel: "Tracking app interface",
+    image: "/images/card-app-v3.png",
+    imageLabel: "Tracking app screens",
   },
 ];
 
