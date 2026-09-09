@@ -42,7 +42,9 @@ export function Hero({
             >
               <source src={video} type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/55" />
+            {/* scrim: dark enough under the type to hold contrast, light enough
+                above it that the film is not washed out */}
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/65 to-ink/25" />
           </>
         ) : (
           <>

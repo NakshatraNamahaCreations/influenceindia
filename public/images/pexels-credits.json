@@ -222,9 +222,9 @@
       "note": "Arrived pre-composed inside a green ring; the photographic disc is extracted so the diagram draws its own ring"
     },
     {
-      "slot": "home-team-v2 / home-poster-v2",
+      "slot": "home-team-v3 / home-poster-v3",
       "source": "supplied by client",
-      "note": "Home hero video; re-encoded H.264 CRF 27 with the audio track dropped (it plays muted), poster is its first frame"
+      "note": "Home hero video, H.264 CRF 20 with audio dropped (plays muted); poster is its first frame"
     }
   ]
 }
