@@ -225,6 +225,11 @@
       "slot": "home-team-v3 / home-poster-v3",
       "source": "supplied by client",
       "note": "Home hero video, H.264 CRF 20 with audio dropped (plays muted); poster is its first frame"
+    },
+    {
+      "slot": "training-band-v2 / training-band-poster-v2",
+      "source": "supplied by client",
+      "note": "Skill training band video; H.264 CRF 23 with audio dropped (plays muted), poster is its first frame"
     }
   ]
 }

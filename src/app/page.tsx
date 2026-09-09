@@ -168,8 +168,8 @@ export default function HomePage() {
 
         {/* ---------- video band ---------- */}
         <VideoBand
-          video="/videos/training-band.mp4"
-          poster="/images/training-band-poster.jpg"
+          video="/videos/training-band-v2.mp4"
+          poster="/images/training-band-poster-v2.jpg"
           eyebrow="Skill training"
           headingLines={["Skills built", "before deployment"]}
           caption="Every aspirant is trained, assessed and certified before they reach your floor."
