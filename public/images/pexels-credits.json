@@ -20,12 +20,6 @@
       "page": "https://www.pexels.com/photo/7580651/"
     },
     {
-      "slot": "cap-3",
-      "pexelsId": "7581119",
-      "query": "indian office team",
-      "page": "https://www.pexels.com/photo/7581119/"
-    },
-    {
       "slot": "svc-right-staffing",
       "pexelsId": "7580643",
       "query": "indian business",
@@ -216,6 +210,11 @@
       "slot": "cap-2-v2",
       "source": "supplied by client",
       "note": "Verification & compliance artwork; cropped right of centre to hold the six checks in the 4:5 frame"
+    },
+    {
+      "slot": "cap-3-v2",
+      "source": "supplied by client",
+      "note": "24/7 client support artwork; cropped right of centre to keep the support board beside the desk in the 4:5 frame"
     }
   ]
 }

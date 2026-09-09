@@ -146,7 +146,7 @@ export const serviceGroups: ServiceGroup[] = [
           "A 24/7 helpline and client support desk backed by serviceable onsite management — whether it is a routine roster update or an urgent replacement.",
           "Trust, reliability, affordability and quality-assured support, future-proofed against unemployment crises and staffing shocks alike.",
         ],
-        image: "/images/cap-3.jpg",
+        image: "/images/cap-3-v2.png",
         imageLabel: "Client support desk",
       },
       {
