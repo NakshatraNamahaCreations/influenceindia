@@ -195,9 +195,9 @@ export const platformCards = [
 export const capabilityStrip = {
   body: "We deliver scalable staffing solutions tailored to modern business demands — helping entities reduce attrition, improve workforce visibility, and deploy skilled people efficiently with confidence across corporate and non-corporate sectors.",
   images: [
-    { label: "Deployed workforce", src: "/images/strip-workforce.jpg" },
-    { label: "Training centre", src: "/images/strip-training.jpg" },
-    { label: "Client operations", src: "/images/strip-clients.jpg" },
+    { label: "Deployed workforce", src: "/images/strip-workforce-v2.png" },
+    { label: "Onsite team at a client site", src: "/images/strip-training-v2.png" },
+    { label: "Client operations review", src: "/images/strip-clients-v2.png" },
   ],
 };
 

@@ -92,24 +92,6 @@
       "page": "https://www.pexels.com/photo/7581126/"
     },
     {
-      "slot": "strip-workforce",
-      "pexelsId": "7581113",
-      "query": "indian corporate professionals",
-      "page": "https://www.pexels.com/photo/7581113/"
-    },
-    {
-      "slot": "strip-training",
-      "pexelsId": "34212681",
-      "query": "india practical skill training",
-      "page": "https://www.pexels.com/photo/34212681/"
-    },
-    {
-      "slot": "strip-clients",
-      "pexelsId": "7580824",
-      "query": "indian client meeting",
-      "page": "https://www.pexels.com/photo/7580824/"
-    },
-    {
       "slot": "hero video (what-we-do)",
       "pexelsId": "7581229",
       "query": "indian office team meeting",
@@ -234,6 +216,11 @@
       "slot": "card-app-v3",
       "source": "supplied by client",
       "note": "Influence Tracking App screens illustration; cropped to 16:9 for the card"
+    },
+    {
+      "slot": "strip-workforce-v2 / strip-training-v2 / strip-clients-v2",
+      "source": "supplied by client",
+      "note": "One triptych, split into three panels and cropped to the strip's 3:4 slots"
     }
   ]
 }
