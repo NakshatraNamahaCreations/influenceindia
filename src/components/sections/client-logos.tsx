@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-import { Eyebrow } from "@/components/ui/eyebrow";
-import { Reveal } from "@/components/ui/reveal";
+import { HeadingLines } from "@/components/ui/heading-lines";
 import { clientLogos, darkCardLogos } from "@/content/clients";
 
 /**
@@ -73,9 +72,11 @@ export function ClientLogos() {
     <section className="border-t border-line bg-surface">
       <div className="shell">
         <div className="shell-inner py-[clamp(3rem,5vw,4.5rem)]">
-          <Reveal>
-            <Eyebrow>Trusted by</Eyebrow>
-          </Reveal>
+          <HeadingLines
+            lines={["Get opportunity", "to work with"]}
+            mutedCount={1}
+            size="d3"
+          />
         </div>
       </div>
 
