@@ -5,6 +5,10 @@ import { Reveal } from "@/components/ui/reveal";
 /**
  * Full-bleed video band — the reference uses these as breathing room between
  * dense sections (its aerial ship shot). Muted, looping, poster-backed.
+ *
+ * The band is full-bleed, so a 16:9 film is always cropped to the band's own
+ * height; 76vh keeps enough of the frame that the picture reads rather than
+ * showing a letterboxed sliver of it.
  */
 export function VideoBand({
   video,
@@ -13,7 +17,7 @@ export function VideoBand({
   headingLines,
   mutedCount = 1,
   caption,
-  height = "clamp(22rem,58vh,36rem)",
+  height = "clamp(26rem,76vh,46rem)",
 }: {
   video: string;
   poster?: string;
